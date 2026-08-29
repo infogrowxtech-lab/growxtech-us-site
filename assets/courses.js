@@ -14,6 +14,15 @@ window.GX = window.GX || {};
 GX.Courses = (function () {
   var THRESHOLD = 0.75; // 75% watched unlocks the certificate
 
+  // Certificate background art — preloaded as soon as this script runs so
+  // it's almost certainly ready by the time someone finishes 75% of a video.
+  var bgImage = new Image();
+  var bgImageLoaded = false;
+  var bgImageFailed = false;
+  bgImage.onload = function () { bgImageLoaded = true; };
+  bgImage.onerror = function () { bgImageFailed = true; };
+  bgImage.src = '/assets/cert-bg.jpg';
+
   function storeKey(courseId) { return 'gx_course_' + courseId; }
 
   function loadProgress(courseId) {
@@ -41,95 +50,137 @@ GX.Courses = (function () {
     return 'GX-' + Math.abs(h).toString(36).toUpperCase().slice(0, 8);
   }
 
+  // Shrinks a font size (in 1px steps) until `text` fits within maxWidth at
+  // the given weight/family, down to minSize. Leaves ctx.font set to the
+  // chosen size/weight/family and returns that size. Used so long learner
+  // names / course titles never overflow their column.
+  function fitFontSize(ctx, text, weight, family, maxWidth, startSize, minSize) {
+    var size = startSize;
+    while (size > minSize) {
+      ctx.font = weight + ' ' + size + 'px ' + family;
+      if (ctx.measureText(text).width <= maxWidth) break;
+      size -= 1;
+    }
+    ctx.font = weight + ' ' + size + 'px ' + family;
+    return size;
+  }
+
   function drawCertificate(canvas, opts) {
     var ctx = canvas.getContext('2d');
     var W = canvas.width, H = canvas.height;
 
-    var bgGrad = ctx.createLinearGradient(0, 0, W, H);
-    bgGrad.addColorStop(0, '#0B1220');
-    bgGrad.addColorStop(1, '#070B14');
-    ctx.fillStyle = bgGrad;
-    ctx.fillRect(0, 0, W, H);
+    if (bgImageLoaded) {
+      ctx.drawImage(bgImage, 0, 0, W, H);
+    } else {
+      // Fallback if the background art hasn't finished loading (or failed) —
+      // keeps certificate generation working even then.
+      var bgGrad = ctx.createLinearGradient(0, 0, W, H);
+      bgGrad.addColorStop(0, '#0B1220');
+      bgGrad.addColorStop(1, '#070B14');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = 'rgba(243,159,27,.55)';
+      ctx.lineWidth = 3;
+      ctx.strokeRect(28, 28, W - 56, H - 56);
+    }
 
-    // border
-    ctx.strokeStyle = 'rgba(243,159,27,.55)';
-    ctx.lineWidth = 3;
-    ctx.strokeRect(28, 28, W - 56, H - 56);
-    ctx.strokeStyle = 'rgba(255,255,255,.14)';
-    ctx.lineWidth = 1;
-    ctx.strokeRect(42, 42, W - 84, H - 84);
-
-    // top accent glow
-    var glow = ctx.createRadialGradient(W / 2, 0, 10, W / 2, 0, W * 0.6);
-    glow.addColorStop(0, 'rgba(243,159,27,.20)');
-    glow.addColorStop(1, 'rgba(243,159,27,0)');
-    ctx.fillStyle = glow;
-    ctx.fillRect(0, 0, W, H * 0.5);
+    // The background art has the robot mascot on the left third and a gold
+    // medal icon in the bottom-right — all text sits in the clear column to
+    // the right of the robot, using the horizontal line as the name's
+    // signature line, and stays above/beside the medal.
+    var colX = 815;       // text column center
+    var colLeft = 500;    // don't cross into the robot
+    var colRight = 1150;  // stay inside the frame
 
     ctx.textAlign = 'center';
 
-    // wordmark
-    ctx.fillStyle = '#EAF0FA';
-    ctx.font = '700 30px Sora, sans-serif';
-    ctx.fillText('GROWX TECH IT', W / 2, 118);
-    ctx.fillStyle = '#F39F1B';
-    ctx.font = '700 30px Sora, sans-serif';
-    var wm = ctx.measureText('GROWX TECH IT').width;
-    ctx.fillText('X', W / 2 + wm / 2 - 26, 118);
-
-    ctx.fillStyle = '#93A1B8';
-    ctx.font = '600 13px "JetBrains Mono", monospace';
-    ctx.textTransform = 'uppercase';
-    ctx.fillText('FREE COURSE PROGRAM', W / 2, 146);
-
-    ctx.fillStyle = '#EAF0FA';
-    ctx.font = '400 22px "JetBrains Mono", monospace';
-    ctx.fillText('Certificate of Completion', W / 2, 210);
-
-    ctx.fillStyle = '#93A1B8';
-    ctx.font = '400 15px Sora, sans-serif';
-    ctx.fillText('This certifies that', W / 2, 258);
-
-    ctx.fillStyle = '#F5C36B';
-    ctx.font = '800 46px Sora, sans-serif';
-    ctx.fillText(opts.name, W / 2, 322);
-
-    ctx.fillStyle = '#93A1B8';
-    ctx.font = '400 15px Sora, sans-serif';
-    ctx.fillText('has successfully completed', W / 2, 362);
-
-    ctx.fillStyle = '#EAF0FA';
+    // wordmark — measured piece by piece so the stylized orange "X" always
+    // lands exactly on the X in GROWX, regardless of font size/column.
     ctx.font = '700 26px Sora, sans-serif';
-    wrapText(ctx, opts.course, W / 2, 402, W - 220, 32);
-
-    ctx.fillStyle = '#93A1B8';
-    ctx.font = '400 13px "JetBrains Mono", monospace';
-    ctx.fillText('a free program by Growx Tech IT — growxtech-it.us', W / 2, H - 92);
-
-    // footer row: date / id / signature
+    var wmFull = ctx.measureText('GROWX TECH IT').width;
+    var wmStart = colX - wmFull / 2;
+    var wmBefore = 'GROW', wmAfter = ' TECH IT';
     ctx.textAlign = 'left';
-    ctx.fillStyle = '#93A1B8';
+    ctx.fillStyle = '#EAF0FA';
+    ctx.fillText(wmBefore, wmStart, 96);
+    var wmBeforeW = ctx.measureText(wmBefore).width;
+    ctx.fillStyle = '#F39F1B';
+    ctx.fillText('X', wmStart + wmBeforeW, 96);
+    var wmXW = ctx.measureText('X').width;
+    ctx.fillStyle = '#EAF0FA';
+    ctx.fillText(wmAfter, wmStart + wmBeforeW + wmXW, 96);
+    ctx.textAlign = 'center';
+
+    ctx.fillStyle = '#C9D2E3';
+    ctx.font = '600 12px "JetBrains Mono", monospace';
+    ctx.fillText('FREE COURSE PROGRAM', colX, 122);
+
+    ctx.fillStyle = '#EAF0FA';
+    ctx.font = '400 20px "JetBrains Mono", monospace';
+    ctx.fillText('Certificate of Completion', colX, 178);
+
+    // tagline lives in the clear gap above "This certifies that" — the old
+    // spot (bottom-right, near y=665) overlapped the gold medal artwork.
+    ctx.fillStyle = '#C9D2E3';
+    ctx.font = '400 12px "JetBrains Mono", monospace';
+    ctx.fillText('a free program by Growx Tech IT — growxtech-it.us', colX, 212);
+
+    ctx.fillStyle = '#C9D2E3';
+    ctx.font = '400 15px Sora, sans-serif';
+    ctx.fillText('This certifies that', colX, 350);
+
+    // name sits just above the art's own signature line. The line is baked
+    // into the background image, not drawn by us, and it is NOT centered on
+    // colX — measured directly from cert-bg.jpg it runs from x=468 to x=993
+    // (center ~730, width ~525) — so the name is centered and width-fit
+    // against those exact bounds rather than the general text column, or
+    // long names overflow past the line's right end.
+    ctx.fillStyle = '#F5C36B';
+    var sigLineCenterX = 730;
+    var nameMaxWidth = 495; // 525px line width, minus ~15px padding each side
+    fitFontSize(ctx, opts.name, '800', 'Sora, sans-serif', nameMaxWidth, 40, 20);
+    ctx.fillText(opts.name, sigLineCenterX, 445);
+
+    ctx.fillStyle = '#C9D2E3';
+    ctx.font = '400 15px Sora, sans-serif';
+    ctx.fillText('has successfully completed', colX, 515);
+
+    // course title prefers a single line, auto-shrinking to fit; only falls
+    // back to a 2-line wrap (at the smallest size) if it still doesn't fit —
+    // which keeps it from colliding with "has successfully completed" above.
+    ctx.fillStyle = '#EAF0FA';
+    var titleMaxWidth = colRight - colLeft - 60;
+    var titleSize = fitFontSize(ctx, opts.course, '700', 'Sora, sans-serif', titleMaxWidth, 24, 16);
+    if (ctx.measureText(opts.course).width <= titleMaxWidth) {
+      ctx.fillText(opts.course, colX, 550);
+    } else {
+      wrapText(ctx, opts.course, colX, 558, titleMaxWidth, titleSize + 8);
+    }
+
+    // footer row: date / id / verify — kept clear of the medal (bottom right)
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#C9D2E3';
     ctx.font = '600 11px "JetBrains Mono", monospace';
-    ctx.fillText('ISSUED', 90, H - 56);
+    ctx.fillText('ISSUED', colLeft, H - 56);
     ctx.fillStyle = '#EAF0FA';
     ctx.font = '600 14px "JetBrains Mono", monospace';
-    ctx.fillText(opts.date, 90, H - 36);
+    ctx.fillText(opts.date, colLeft, H - 36);
 
     ctx.textAlign = 'center';
-    ctx.fillStyle = '#93A1B8';
+    ctx.fillStyle = '#C9D2E3';
     ctx.font = '600 11px "JetBrains Mono", monospace';
-    ctx.fillText('CERTIFICATE ID', W / 2, H - 56);
+    ctx.fillText('CERTIFICATE ID', colX, H - 56);
     ctx.fillStyle = '#EAF0FA';
     ctx.font = '600 14px "JetBrains Mono", monospace';
-    ctx.fillText(opts.id, W / 2, H - 36);
+    ctx.fillText(opts.id, colX, H - 36);
 
     ctx.textAlign = 'right';
-    ctx.fillStyle = '#93A1B8';
+    ctx.fillStyle = '#C9D2E3';
     ctx.font = '600 11px "JetBrains Mono", monospace';
-    ctx.fillText('VERIFY', W - 90, H - 56);
+    ctx.fillText('VERIFY', colRight, H - 56);
     ctx.fillStyle = '#4FD8FF';
     ctx.font = '600 14px "JetBrains Mono", monospace';
-    ctx.fillText('growxtech-it.us/courses', W - 90, H - 36);
+    ctx.fillText('growxtech-it.us/courses', colRight, H - 36);
   }
 
   function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
@@ -232,33 +283,52 @@ GX.Courses = (function () {
         var id = certId(course.title, name);
         var date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
-        drawCertificate(certCanvas, { name: name, course: course.title, date: date, id: id });
+        function finishCertificate() {
+          drawCertificate(certCanvas, { name: name, course: course.title, date: date, id: id });
 
-        if (window.GX && GX.submitLead) {
-          GX.submitLead({
-            type: 'course-certificate',
-            name: name,
-            email: email,
-            target: course.title,
-            note: 'Completed free course "' + course.title + '", certificate ' + id
-          });
+          if (window.GX && GX.submitLead) {
+            GX.submitLead({
+              type: 'course-certificate',
+              name: name,
+              email: email,
+              target: course.title,
+              note: 'Completed free course "' + course.title + '", certificate ' + id
+            });
+          }
+
+          certForm.hidden = true;
+          certCanvas.hidden = false;
+          if (certDownload) {
+            certDownload.hidden = false;
+            certDownload.addEventListener('click', function () {
+              var url = certCanvas.toDataURL('image/png');
+              var a = document.createElement('a');
+              a.href = url;
+              a.download = 'growx-certificate-' + course.id + '.png';
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+            });
+          }
+          if (certStatus) certStatus.hidden = false;
         }
 
-        certForm.hidden = true;
-        certCanvas.hidden = false;
-        if (certDownload) {
-          certDownload.hidden = false;
-          certDownload.addEventListener('click', function () {
-            var url = certCanvas.toDataURL('image/png');
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = 'growx-certificate-' + course.id + '.png';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-          });
+        // Give the background art a brief moment to finish loading (it starts
+        // loading as soon as this script runs, so this rarely waits at all)
+        // rather than falling back to the plain gradient unnecessarily.
+        if (bgImageLoaded || bgImageFailed) {
+          finishCertificate();
+        } else {
+          var settled = false;
+          var proceed = function () {
+            if (settled) return;
+            settled = true;
+            finishCertificate();
+          };
+          bgImage.addEventListener('load', proceed);
+          bgImage.addEventListener('error', proceed);
+          setTimeout(proceed, 1500); // safety timeout — never block generation for long
         }
-        if (certStatus) certStatus.hidden = false;
       });
     }
   }
