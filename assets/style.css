@@ -39,13 +39,14 @@ a{color:inherit;}
 .aurora{
   position:fixed; inset:-20%; z-index:-1; pointer-events:none;
   background:
-    radial-gradient(38% 30% at 22% 22%, rgba(139,124,255,.14), transparent 70%),
-    radial-gradient(34% 28% at 80% 12%, rgba(79,216,255,.11), transparent 70%),
-    radial-gradient(40% 34% at 60% 88%, rgba(245,195,107,.06), transparent 70%);
+    radial-gradient(40% 32% at 20% 18%, rgba(139,124,255,.20), transparent 70%),
+    radial-gradient(36% 30% at 82% 10%, rgba(79,216,255,.16), transparent 70%),
+    radial-gradient(42% 36% at 62% 90%, rgba(245,195,107,.10), transparent 70%),
+    radial-gradient(30% 26% at 6% 78%, rgba(243,159,27,.08), transparent 70%);
   filter:blur(10px); will-change:transform;
 }
-@media (prefers-reduced-motion:no-preference){ .aurora{animation:drift 26s ease-in-out infinite alternate;} }
-@keyframes drift{from{transform:translate3d(-2%,-1%,0) scale(1);} to{transform:translate3d(2%,2%,0) scale(1.06);}}
+@media (prefers-reduced-motion:no-preference){ .aurora{animation:drift 22s ease-in-out infinite alternate;} }
+@keyframes drift{from{transform:translate3d(-2%,-1%,0) scale(1);} to{transform:translate3d(2.5%,2.5%,0) scale(1.08);}}
 
 .sr{opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);}
 .sr.in{opacity:1; transform:none;}
@@ -90,7 +91,7 @@ nav{position:sticky; top:0; z-index:50; background:rgba(7,11,20,.7); backdrop-fi
 
 /* HERO (home) */
 .hero{position:relative; padding:100px 0 92px; overflow:hidden;}
-#net{position:absolute; inset:0; width:100%; height:100%; opacity:.55;}
+#net{position:absolute; inset:0; width:100%; height:100%; opacity:.75;}
 .hero-grid{display:grid; grid-template-columns:1.12fr .88fr; gap:52px; align-items:center; position:relative; z-index:2;}
 @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
 .chip{
@@ -294,12 +295,12 @@ footer a:hover{color:var(--cyan);}
 /* ---------- LOGO LOCKUP ---------- */
 .logo{display:inline-flex; align-items:center; gap:11px; text-decoration:none;}
 .logo img{height:36px; width:auto; display:block; flex:none;}
-.logo-txt{display:flex; flex-direction:column; line-height:1;}
+.logo-txt{display:flex; flex-direction:column; align-items:center; line-height:1;}
 .logo-txt b{font-size:1.16rem; font-weight:800; letter-spacing:.055em;}
 .logo-txt b i{font-style:normal; color:var(--orange); text-shadow:0 0 16px rgba(243,159,27,.55);}
 .logo-txt em{
   font-style:normal; font-size:.575rem; font-weight:700;
-  letter-spacing:.42em; color:var(--muted); margin-top:4px; padding-left:2px;
+  letter-spacing:.42em; color:var(--muted); margin-top:4px; text-align:center;
 }
 .foot-logo{color:var(--ink); margin-bottom:14px;}
 
