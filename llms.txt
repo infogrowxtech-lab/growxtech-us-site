@@ -50,9 +50,9 @@ Growx works with candidates nationwide, entirely remotely — it does not have a
 
 Growx publishes research-backed articles on the US job market at [/blog](https://growxtech-it.us/blog), aimed at job seekers rather than at search engines. Every factual claim is sourced. New posts are added weekly. Current posts:
 
-- [What ATS Resume Screening Actually Looks For in 2026](https://growxtech-it.us/blog-ats-resume-screening): what applicant tracking systems actually do, based on published research, and common misconceptions corrected
-- [How Long Does It Actually Take to Land a Tech Job in the US Right Now?](https://growxtech-it.us/blog-tech-job-search-timeline): labor-market data on US tech job search duration and what shortens a search
-- [LinkedIn Headline Mistakes That Make Recruiters Scroll Past You](https://growxtech-it.us/blog-linkedin-headline-mistakes): common headline mistakes and what a strong headline does instead
+- [What ATS Resume Screening Actually Looks For in 2026](https://growxtech-it.us/blog-ats-resume-screening): Most of what job seekers believe about Applicant Tracking Systems is outdated or wrong. What the research actually shows, and what to fix.
+- [How Long Does It Actually Take to Land a Tech Job in the US Right Now?](https://growxtech-it.us/blog-tech-job-search-timeline): Real labor-market data on how long US tech job searches are taking right now, why it feels slower even with low tech unemployment, and what shortens a search.
+- [LinkedIn Headline Mistakes That Make Recruiters Scroll Past You](https://growxtech-it.us/blog-linkedin-headline-mistakes): Your LinkedIn headline is the most-searched field on your profile. The mistakes that bury good candidates, and what a strong headline does instead.
 
 ## Pages
 
