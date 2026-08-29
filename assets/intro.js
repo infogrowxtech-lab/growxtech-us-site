@@ -14,8 +14,6 @@
   document.documentElement.classList.add('intro-lock');
 
   var vid   = document.getElementById('introVid');
-  var skip  = document.getElementById('introSkip');
-  var sound = document.getElementById('introSound');
   var prog  = document.getElementById('introProg');
   var greet = document.getElementById('greet');
   var done  = false;
@@ -53,20 +51,8 @@
     if (p && p.catch) p.catch(function () { /* autoplay blocked, poster stays up */ });
   }
 
-  if (skip) skip.addEventListener('click', finish);
-
-  if (sound && vid) {
-    sound.addEventListener('click', function () {
-      vid.muted = !vid.muted;
-      sound.textContent = vid.muted ? '🔇 Sound on' : '🔊 Sound off';
-      if (!vid.muted) { var q = vid.play(); if (q && q.catch) q.catch(function () {}); }
-    });
-  }
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' || e.key === 'Enter') finish();
-  });
-
-  /* hard stop so nobody is ever trapped behind the video */
+  /* No skip/sound controls by design — the intro autoplays muted and closes
+     itself when the video ends. This hard stop is just a safety net in case
+     autoplay is ever blocked, so nobody is stuck behind a frozen poster. */
   setTimeout(finish, 13000);
 })();
