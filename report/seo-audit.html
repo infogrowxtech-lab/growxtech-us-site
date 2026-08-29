@@ -1,0 +1,471 @@
+<title>Competitor SEO/AEO Audit</title>
+<style>
+:root{
+  --paper:#F6F3EC;
+  --ink:#16181D;
+  --muted:#656A72;
+  --line:#E1DCCF;
+  --accent:#F39F1B;
+  --accent-deep:#A85D0A;
+  --navy:#0B0F1A;
+  --ok:#3E7D4E;
+  --no:#B14444;
+  --partial:#A87A1C;
+  --card:#FFFEFB;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B0F1A;
+    --ink:#EDEAE0;
+    --muted:#9A9DA6;
+    --line:#242A38;
+    --accent:#F5AE3D;
+    --accent-deep:#F5AE3D;
+    --navy:#0B0F1A;
+    --ok:#5FB577;
+    --no:#E07A7A;
+    --partial:#E0B15C;
+    --card:#12172400;
+    --card:#121724;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0B0F1A;
+  --ink:#EDEAE0;
+  --muted:#9A9DA6;
+  --line:#242A38;
+  --accent:#F5AE3D;
+  --accent-deep:#F5AE3D;
+  --navy:#0B0F1A;
+  --ok:#5FB577;
+  --no:#E07A7A;
+  --partial:#E0B15C;
+  --card:#121724;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Source Serif 4","Iowan Old Style",Georgia,serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent);color:var(--navy);}
+
+.wrap{max-width:840px;margin:0 auto;padding:64px 24px 120px;}
+
+.eyebrow{
+  font-family:"JetBrains Mono","IBM Plex Mono",ui-monospace,monospace;
+  font-size:12.5px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--muted);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:22px;
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.eyebrow b{color:var(--ink);font-weight:600;}
+
+h1{
+  font-family:"Sora",ui-sans-serif,system-ui,sans-serif;
+  font-weight:800;
+  font-size:clamp(32px,5vw,46px);
+  line-height:1.12;
+  letter-spacing:-.01em;
+  margin:0 0 18px;
+  text-wrap:balance;
+}
+h1 em{
+  font-style:normal;
+  color:var(--accent-deep);
+}
+
+.dek{
+  font-size:18px;
+  color:var(--muted);
+  max-width:62ch;
+  margin:0 0 40px;
+}
+
+.metabar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 28px;
+  padding:18px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin-bottom:48px;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:12.5px;
+  color:var(--muted);
+}
+.metabar span b{color:var(--ink);font-weight:600;}
+
+h2{
+  font-family:"Sora",ui-sans-serif,system-ui,sans-serif;
+  font-weight:700;
+  font-size:23px;
+  letter-spacing:-.005em;
+  margin:64px 0 8px;
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+}
+h2 .no{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:14px;
+  font-weight:500;
+  color:var(--accent-deep);
+}
+.section-note{color:var(--muted);font-size:16px;margin:0 0 28px;max-width:64ch;}
+
+p{margin:0 0 16px;font-size:16.5px;}
+p.lead{font-size:18px;}
+
+/* headline finding */
+.headline{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  border-radius:2px;
+  padding:22px 26px;
+  margin:0 0 40px;
+}
+.headline .k{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:11.5px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent-deep);
+  display:block;
+  margin-bottom:10px;
+}
+.headline p{margin:0;font-size:17px;}
+.headline p + p{margin-top:10px;}
+
+/* matrix table */
+.matrix-scroll{overflow-x:auto;margin:0 0 12px;border:1px solid var(--line);border-radius:3px;}
+table.matrix{
+  border-collapse:collapse;
+  width:100%;
+  min-width:760px;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:12.5px;
+  background:var(--card);
+}
+table.matrix caption{display:none;}
+table.matrix th, table.matrix td{
+  padding:10px 9px;
+  text-align:center;
+  border-bottom:1px solid var(--line);
+  border-right:1px solid var(--line);
+  white-space:nowrap;
+}
+table.matrix th:last-child, table.matrix td:last-child{border-right:none;}
+table.matrix thead th{
+  font-weight:600;
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.02em;
+  vertical-align:bottom;
+  padding-bottom:12px;
+  background:var(--card);
+}
+table.matrix thead th.rowlabel{text-align:left;}
+table.matrix thead th.growx{color:var(--accent-deep);}
+table.matrix tbody th{
+  text-align:left;
+  font-weight:500;
+  color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif;
+  font-size:13.5px;
+  white-space:normal;
+  max-width:180px;
+}
+table.matrix tbody tr:last-child th, table.matrix tbody tr:last-child td{border-bottom:none;}
+td.growx{background:color-mix(in srgb, var(--accent) 12%, transparent);}
+.yes{color:var(--ok);font-weight:700;}
+.no{color:var(--no);}
+.partial{color:var(--partial);}
+.matrix-legend{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:11.5px;
+  color:var(--muted);
+  display:flex;
+  gap:18px;
+  margin:0 0 8px;
+}
+.matrix-legend .yes{font-weight:700;}
+
+/* competitor dossiers */
+.dossiers{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:8px;
+}
+@media (max-width:640px){.dossiers{grid-template-columns:1fr;}}
+.dcard{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:18px 20px;
+}
+.dcard h3{
+  font-family:"Sora",sans-serif;
+  font-size:15px;
+  font-weight:700;
+  margin:0 0 2px;
+}
+.dcard .url{
+  font-family:"JetBrains Mono",monospace;
+  font-size:11px;
+  color:var(--muted);
+  margin:0 0 12px;
+  word-break:break-all;
+}
+.dcard .strength{font-size:14px;margin:0 0 8px;}
+.dcard .strength b{color:var(--accent-deep);font-weight:600;}
+.dcard .steal{
+  font-size:13.5px;
+  color:var(--muted);
+  margin:0;
+  padding-top:10px;
+  border-top:1px dashed var(--line);
+}
+.dcard .steal b{color:var(--ink);font-weight:600;}
+
+/* shipped changelog */
+.shipped{
+  border:1px solid var(--line);
+  border-radius:3px;
+  overflow:hidden;
+  background:var(--card);
+}
+.ship-row{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:18px;
+  padding:16px 20px;
+  border-bottom:1px solid var(--line);
+}
+.ship-row:last-child{border-bottom:none;}
+.ship-tag{
+  font-family:"JetBrains Mono",monospace;
+  font-size:11px;
+  letter-spacing:.03em;
+  color:var(--ok);
+  font-weight:700;
+  align-self:start;
+  padding-top:2px;
+}
+.ship-body b{
+  font-family:"Sora",sans-serif;
+  font-weight:700;
+  font-size:15px;
+  display:block;
+  margin-bottom:4px;
+}
+.ship-body p{margin:0;font-size:14.5px;color:var(--muted);}
+.ship-body code{
+  font-family:"JetBrains Mono",monospace;
+  font-size:12.5px;
+  background:color-mix(in srgb, var(--accent) 14%, transparent);
+  color:var(--accent-deep);
+  padding:1px 5px;
+  border-radius:2px;
+}
+
+/* next up list */
+.nextup{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;}
+.nextup li{
+  display:grid;
+  grid-template-columns:28px 1fr;
+  gap:14px;
+  padding:16px 18px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:3px;
+}
+.nextup .rank{
+  font-family:"JetBrains Mono",monospace;
+  font-weight:700;
+  color:var(--accent-deep);
+  font-size:15px;
+}
+.nextup b{font-family:"Sora",sans-serif;font-size:15px;display:block;margin-bottom:3px;}
+.nextup p{margin:0;font-size:14.5px;color:var(--muted);}
+
+footer{
+  margin-top:72px;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+  font-family:"JetBrains Mono",monospace;
+  font-size:11.5px;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px;
+}
+a{color:var(--accent-deep);}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="wrap">
+
+  <div class="eyebrow"><span class="dot"></span> Growx Tech IT &nbsp;·&nbsp; <b>Competitive SEO / AEO Audit</b> &nbsp;·&nbsp; Aug 28, 2026</div>
+
+  <h1>Every competitor checked, and what <em>growxtech-it.us</em> is missing that they aren't.</h1>
+  <p class="dek">8 competitor sites pulled apart for schema, content depth and structure, benchmarked against growxtech-it.us, plus the answer-engine (AEO) fixes shipped to your own site today.</p>
+
+  <div class="metabar">
+    <span><b>8</b> competitors audited</span>
+    <span><b>9</b> signals compared</span>
+    <span><b>0 / 8</b> competitors had working schema markup</span>
+    <span><b>3</b> fixes shipped live today</span>
+  </div>
+
+  <div class="headline">
+    <span class="k">The one-line finding</span>
+    <p><b>Your schema and pricing transparency already beat all eight competitors</b> — not one of them had confirmed, working JSON-LD when checked. The gap that's actually holding you back is <b>content surface area</b>: you have 7 pages and zero blog posts; the competitors that show up have 9 to 73 pages, and several run 15–31 blog posts and real city landing pages.</p>
+    <p>That, plus the fact that growxtech-it.us went live this week — no domain age, no backlinks, nothing indexed yet. Technical SEO can't shortcut that part; it just needs time plus the content below.</p>
+  </div>
+
+  <h2><span class="no">01</span> Signal matrix</h2>
+  <p class="section-note">What each site actually has, not what it claims to have. Checked by fetching each site directly.</p>
+
+  <div class="matrix-legend"><span class="yes">✓ present</span><span class="partial">◐ partial / unmarked</span><span class="no">✕ absent</span></div>
+  <div class="matrix-scroll">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th class="rowlabel">Signal</th>
+          <th class="growx">Growx</th>
+          <th>CareerUS</th>
+          <th>Codex</th>
+          <th>InfiJobs</th>
+          <th>Helix</th>
+          <th>Lone&nbsp;Wolf</th>
+          <th>Wolf&nbsp;Tech</th>
+          <th>JHEx</th>
+          <th>Bytewave</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th>JSON-LD schema</th><td class="growx yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="partial">◐</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><th>FAQ content marked up</th><td class="growx yes">✓</td><td class="no">✕</td><td class="partial">◐</td><td class="partial">◐</td><td class="partial">◐</td><td class="partial">◐</td><td class="partial">◐</td><td class="no">✕</td><td class="partial">◐</td></tr>
+        <tr><th>Blog / content hub</th><td class="growx no">✕</td><td class="partial">◐</td><td class="partial">◐</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="partial">◐</td></tr>
+        <tr><th>City / location pages</th><td class="growx no">✕</td><td class="no">✕</td><td class="partial">◐</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><th>Transparent pricing page</th><td class="growx yes">✓</td><td class="no">✕</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="partial">◐</td><td class="yes">✓</td><td class="no">✕</td></tr>
+        <tr><th>Unique title/meta per page</th><td class="growx yes">✓</td><td class="yes">✓</td><td class="no">✕</td><td class="yes">✓</td><td class="no">✕</td><td class="partial">◐</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><th>AI-crawler allow in robots.txt</th><td class="growx yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><th>llms.txt</th><td class="growx yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><th>Indexable page count</th><td class="growx">7</td><td>~40</td><td>11</td><td>~15</td><td>73</td><td>45</td><td>51</td><td>9</td><td>11</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2><span class="no">02</span> Competitor dossiers</h2>
+  <p class="section-note">One real strength worth studying, and the specific thing to take from each — not generic advice.</p>
+
+  <div class="dossiers">
+    <div class="dcard">
+      <h3>CareerUS Solution</h3>
+      <p class="url">careerussolution.com</p>
+      <p class="strength"><b>13</b> separate service/solution URLs instead of one services page — each targets a different long-tail search.</p>
+      <p class="steal"><b>Steal:</b> split your services page into individual URLs per offer (resume, LinkedIn, training, interview prep, mentorship).</p>
+    </div>
+    <div class="dcard">
+      <h3>Codex Tech IT</h3>
+      <p class="url">codextech-it.com</p>
+      <p class="strength">3-tier pricing page + Canada landing page + $500 referral page. But the exact same page title on every page — a real penalty, not a strength.</p>
+      <p class="steal"><b>Steal:</b> a country/region-specific landing page, the way they did for Canada.</p>
+    </div>
+    <div class="dcard">
+      <h3>InfiJobs</h3>
+      <p class="url">infijobs.pro</p>
+      <p class="strength">Named founder/team bios with LinkedIn links, E-Verify/DHS-SSA trust badges, testimonials that name JPMorgan, Google, Amazon as placement outcomes.</p>
+      <p class="steal"><b>Steal:</b> named-employer proof in testimonials reads far more credible than a star rating.</p>
+    </div>
+    <div class="dcard">
+      <h3>Helix Tech Inc</h3>
+      <p class="url">helixtechinc.com</p>
+      <p class="strength"><b>73</b> pages: a landing page per course, per service, per city (New York, LA, Chicago, Houston, Phoenix...) plus free tools (resume builder, cover letter examples).</p>
+      <p class="steal"><b>Steal:</b> free resume/interview-prep tools — cheap to build, strong AEO bait.</p>
+    </div>
+    <div class="dcard">
+      <h3>Lone Wolf Recruitment</h3>
+      <p class="url">lonewolfrecruitment.com</p>
+      <p class="strength">robots.txt explicitly names GPTBot, ClaudeBot, PerplexityBot as welcome — a deliberate AEO play. 31 posts on a city × niche template ("HR Consultancy in Chicago for Indian Students").</p>
+      <p class="steal"><b>Steal:</b> already matched — we shipped the same AI-crawler allow list today (see below).</p>
+    </div>
+    <div class="dcard">
+      <h3>Wolf Technologies</h3>
+      <p class="url">wolftechnologiesllc.com</p>
+      <p class="strength">15 blog posts, all titled as questions ("Why Communication Skills Matter More Than Coding in U.S. Tech Jobs?") — exactly the shape AI answer engines lift.</p>
+      <p class="steal"><b>Steal:</b> question-titled articles. Don't copy their "Application Guaranteed" package naming — that's a promise Charlie is deliberately built never to make.</p>
+    </div>
+    <div class="dcard">
+      <h3>JHEx</h3>
+      <p class="url">jhex.info</p>
+      <p class="strength">Only 9 pages and single-word titles ("Jhex," "Plans") — genuinely weak. Its one asset: Google Reviews embedded directly on the pricing page.</p>
+      <p class="steal"><b>Steal:</b> embedding real reviews next to the price people are about to pay.</p>
+    </div>
+    <div class="dcard">
+      <h3>Bytewave Technology</h3>
+      <p class="url">bytewavetechnology.com</p>
+      <p class="strength">Built a full blog infrastructure (5 categories) — then never published to it. A cautionary example, not a model.</p>
+      <p class="steal"><b>Steal:</b> nothing structural — but it's proof a half-started blog is worse than no blog. If we build one, we finish it.</p>
+    </div>
+  </div>
+
+  <h2><span class="no">03</span> Shipped today</h2>
+  <p class="section-note">Live on growxtech-it.us right now — verified by fetching the deployed site after publish.</p>
+
+  <div class="shipped">
+    <div class="ship-row">
+      <div class="ship-tag">ADDED</div>
+      <div class="ship-body">
+        <b>AI-crawler allow list in robots.txt</b>
+        <p>GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, Amazonbot and 6 others explicitly welcomed — matches what only Lone Wolf, the strongest competitor on this signal, was doing.</p>
+      </div>
+    </div>
+    <div class="ship-row">
+      <div class="ship-tag">NEW</div>
+      <div class="ship-body">
+        <b>/llms.txt published</b>
+        <p>A plain-language summary of who Growx is, the six-stage process, the full price list and every page — the format AI assistants read first. Includes an explicit instruction not to imply guarantees Growx doesn't make. <code>growxtech-it.us/llms.txt</code></p>
+      </div>
+    </div>
+    <div class="ship-row">
+      <div class="ship-tag">MARKED UP</div>
+      <div class="ship-body">
+        <b>Review schema on the 3 homepage testimonials</b>
+        <p>Aimbys Solutions, Tavish Infotech and 100 Hires quotes are now inside the <code>ProfessionalService</code> JSON-LD as real <code>Review</code> objects — same content already on the page, now machine-readable.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="no">04</span> Recommended next</h2>
+  <p class="section-note">Needs real facts and decisions from you — not something to fabricate, so these weren't built today.</p>
+
+  <ol class="nextup">
+    <li><span class="rank">1</span><div><b>A small blog — 8 to 12 real posts</b><p>The single biggest gap on the matrix above. Wolf Technologies (15 posts) and Lone Wolf (31 posts) are both getting cited for it. Question-format titles, real Growx facts only.</p></div></li>
+    <li><span class="rank">2</span><div><b>2–3 city landing pages</b><p>Helix and Lone Wolf both rank on this. Tell me the 2–3 U.S. metros you actually place the most candidates into and I'll build the pages.</p></div></li>
+    <li><span class="rank">3</span><div><b>A visa/H1B guide page</b><p>Not one of the 8 competitors owns this topic cleanly — open ground, and it's a natural AEO target for "does Growx sponsor H1B" type questions.</p></div></li>
+    <li><span class="rank">4</span><div><b>AggregateRating, once there's a real count</b><p>Once you're collecting reviews on Google or Trustpilot, that star count can go into the schema honestly — not before.</p></div></li>
+  </ol>
+
+  <footer>
+    <span>growxtech-it.us — internal audit</span>
+    <span>Sources: direct fetch of each competitor site, checked live</span>
+  </footer>
+
+</div>
