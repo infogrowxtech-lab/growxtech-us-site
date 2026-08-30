@@ -123,7 +123,7 @@ GX.Courses = (function () {
     // spot (bottom-right, near y=665) overlapped the gold medal artwork.
     ctx.fillStyle = '#C9D2E3';
     ctx.font = '400 12px "JetBrains Mono", monospace';
-    ctx.fillText('a free program by Growx Tech IT — growxtech-it.us', colX, 212);
+    ctx.fillText('a free program by Growx Tech IT · growxtech-it.us', colX, 212);
 
     ctx.fillStyle = '#C9D2E3';
     ctx.font = '400 15px Sora, sans-serif';
@@ -222,7 +222,7 @@ GX.Courses = (function () {
       if (certBtn) certBtn.disabled = !unlocked;
       if (unlockNote) {
         unlockNote.textContent = unlocked
-          ? 'Unlocked — you can generate your certificate below.'
+          ? 'Unlocked: you can generate your certificate below.'
           : 'Watch at least ' + Math.round(THRESHOLD * 100) + '% of the video to unlock your free certificate.';
       }
     }

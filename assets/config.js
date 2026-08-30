@@ -14,7 +14,7 @@ GX.WA        = '13026831622';
 GX.WA_DISPLAY= '+1 (302) 683-1622';
 GX.TEL       = '+17198389991';
 GX.TEL_DISPLAY = '+1 (719) 838-9991';
-GX.EMAIL     = 'connect@growxtech-it.us';
+GX.EMAIL     = 'hi@growxtech-it.us';
 
 GX.SHEET_URL = 'https://script.google.com/macros/s/AKfycbyW-EBzKfKQWj4ZMtpZ1tSq8jnfS2lYZQu2PXpPVVY3H1vVtIJKtRSrg2hQFuOUYnOJmg/exec';
 GX.MAIL_URL  = '';   // not needed, the Apps Script emails you directly

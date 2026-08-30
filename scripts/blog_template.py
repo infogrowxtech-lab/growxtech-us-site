@@ -150,7 +150,7 @@ PAGE = '''<!doctype html>
         <ul>
           <li><a href="tel:+17198389991">&#128222; +1 (719) 838-9991</a></li>
           <li><a href="https://wa.me/13026831622" target="_blank" rel="noopener">&#128172; WhatsApp +1 (302) 683-1622</a></li>
-          <li><a href="mailto:connect@growxtech-it.us">&#9993; connect@growxtech-it.us</a></li>
+          <li><a href="mailto:hi@growxtech-it.us">&#9993; hi@growxtech-it.us</a></li>
         </ul>
         <h4 style="margin-top:18px;">Follow</h4>
         <ul><li><a href="https://www.linkedin.com/company/growx-tech-it/" rel="noopener">LinkedIn</a></li><li><a href="https://www.instagram.com/growxtechit" rel="noopener">Instagram</a></li><li><a href="https://x.com/growxtechit" rel="noopener">Twitter / X</a></li></ul>

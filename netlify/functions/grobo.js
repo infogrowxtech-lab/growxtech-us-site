@@ -37,7 +37,7 @@ A career services and placement company, registered as Growx Tech IT LLC.
 ## Contact
 - Call: +1 (719) 838-9991
 - WhatsApp: +1 (302) 683-1622
-- Email: connect@growxtech-it.us
+- Email: hi@growxtech-it.us
 - Pages: /services /pricing /jobs /referral /contact /privacy-policy
 
 ## The six-stage process

@@ -7,6 +7,9 @@
   if (!box) return;
 
   var ta      = document.getElementById('rzText');
+  var fileEl  = document.getElementById('rzFile');
+  var fileLbl = document.getElementById('rzFileLabel');
+  var fileBtn = document.querySelector('.rz-file-btn');
   var goBtn   = document.getElementById('rzGo');
   var intro   = document.getElementById('engineIntro');
   var result  = document.getElementById('engineResult');
@@ -214,6 +217,130 @@
       'Hi, I ran the free resume check and scored ' + res.score + ' out of 100. I would like it rewritten.');
 
     try { localStorage.setItem('gx_rz_score', String(res.score)); } catch (e) {}
+  }
+
+  /* Direct file upload for the resume text. Everything happens in the browser:
+     .txt is read locally with FileReader, .pdf/.docx are parsed locally with
+     pdf.js / mammoth.js (fetched from a CDN only for the library code itself,
+     never for the resume). The extracted text never leaves the device. */
+  var LIB_URLS = {
+    pdfjs:       'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',
+    pdfjsWorker: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js',
+    mammoth:     'https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js'
+  };
+  var loadedLibs = {};
+
+  function loadScript(url) {
+    if (loadedLibs[url]) return loadedLibs[url];
+    loadedLibs[url] = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = url;
+      s.onload = resolve;
+      s.onerror = function () { reject(new Error('Could not load ' + url)); };
+      document.head.appendChild(s);
+    });
+    return loadedLibs[url];
+  }
+
+  function setFileHint(msg, isError) {
+    var hint = document.getElementById('rzHint');
+    if (!hint) return;
+    hint.textContent = msg;
+    hint.classList.toggle('rz-hint-error', !!isError);
+  }
+
+  function setFileState(label, ok) {
+    if (fileLbl) fileLbl.textContent = label;
+    if (fileBtn) fileBtn.classList.toggle('has-file', !!ok);
+  }
+
+  function readAsText(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(r.result); };
+      r.onerror = function () { reject(r.error); };
+      r.readAsText(file);
+    });
+  }
+
+  function readAsArrayBuffer(file) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { resolve(r.result); };
+      r.onerror = function () { reject(r.error); };
+      r.readAsArrayBuffer(file);
+    });
+  }
+
+  function extractPdf(file) {
+    return loadScript(LIB_URLS.pdfjs).then(function () {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = LIB_URLS.pdfjsWorker;
+      return readAsArrayBuffer(file);
+    }).then(function (buf) {
+      return window.pdfjsLib.getDocument({ data: buf }).promise;
+    }).then(function (pdf) {
+      var pages = [];
+      var chain = Promise.resolve();
+      var _loop = function (i) {
+        chain = chain.then(function () {
+          return pdf.getPage(i).then(function (page) {
+            return page.getTextContent();
+          }).then(function (content) {
+            pages.push(content.items.map(function (it) { return it.str; }).join(' '));
+          });
+        });
+      };
+      for (var i = 1; i <= pdf.numPages; i++) _loop(i);
+      return chain.then(function () { return pages.join('\n\n'); });
+    });
+  }
+
+  function extractDocx(file) {
+    return loadScript(LIB_URLS.mammoth).then(function () {
+      return readAsArrayBuffer(file);
+    }).then(function (buf) {
+      return window.mammoth.extractRawText({ arrayBuffer: buf });
+    }).then(function (res) { return res.value; });
+  }
+
+  if (fileEl) {
+    fileEl.addEventListener('change', function () {
+      var file = fileEl.files && fileEl.files[0];
+      if (!file) return;
+
+      var name = file.name || '';
+      var ext = (name.split('.').pop() || '').toLowerCase();
+      setFileState('Reading ' + name + '…', false);
+      if (fileBtn) fileBtn.classList.add('is-busy');
+
+      var task;
+      if (ext === 'txt') {
+        task = readAsText(file);
+      } else if (ext === 'pdf') {
+        task = extractPdf(file);
+      } else if (ext === 'doc' || ext === 'docx') {
+        task = extractDocx(file);
+      } else {
+        task = Promise.reject(new Error('unsupported'));
+      }
+
+      task.then(function (text) {
+        text = (text || '').trim();
+        if (!text) throw new Error('empty');
+        ta.value = text;
+        setFileState(name, true);
+        setFileHint('🔒 Loaded from ' + name + ', still only on your device. Nothing was uploaded.', false);
+      }).catch(function (err) {
+        setFileState('Or upload a file (.pdf, .docx, .txt)', false);
+        var msg = (err && err.message === 'unsupported')
+          ? 'That file type is not supported, please paste the text instead.'
+          : 'Could not read that file automatically, please paste the resume text instead.';
+        setFileHint('⚠️ ' + msg, true);
+      }).finally(function () {
+        if (fileBtn) fileBtn.classList.remove('is-busy');
+        fileEl.value = '';
+      });
+    });
   }
 
   goBtn.addEventListener('click', function () {

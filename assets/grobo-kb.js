@@ -8,7 +8,7 @@ window.GROBO_KB = (function () {
 
   var TEL_D = '+1 (719) 838-9991';
   var WA_D  = '+1 (302) 683-1622';
-  var MAIL  = 'connect@growxtech-it.us';
+  var MAIL  = 'hi@growxtech-it.us';
 
   /* Shorthands used inside answers.
      {{wa:text}}    -> WhatsApp button with a prefilled message
@@ -282,7 +282,7 @@ window.GROBO_KB = (function () {
   { id:'offices', w:2,
     k:['where','address','office','location','located','based','headquarters','hq','come to office','visit'],
     a:[
-      '🇺🇸 <b>USA</b> — Growx Tech IT LLC, 30 N Gould St, Sheridan, Wyoming 82801<br>🇮🇳 <b>India</b> — Growx Tech IT LLC, C-706, Siddhi Vinayak Towers, Sarkhej , Gandhinagar Hwy, Makarba, Ahmedabad, Gujarat 380051<br><br>Most of the work happens remotely, so wherever you are is fine.',
+      '🇺🇸 <b>USA</b>: Growx Tech IT LLC, 30 N Gould St, Sheridan, Wyoming 82801<br>🇮🇳 <b>India</b>: Growx Tech IT LLC, C-706, Siddhi Vinayak Towers, Sarkhej , Gandhinagar Hwy, Makarba, Ahmedabad, Gujarat 380051<br><br>Most of the work happens remotely, so wherever you are is fine.',
       'Two offices: Sheridan in Wyoming for the US, and Ahmedabad in Gujarat for India. Everything we do works remotely though, candidates across the US, India and Australia.'
     ] },
 

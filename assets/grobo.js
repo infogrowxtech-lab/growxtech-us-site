@@ -8,7 +8,7 @@
   var WA_NUM = C.WA || '13026831622';
   var TEL    = C.TEL || '+17198389991';
   var TEL_D  = C.TEL_DISPLAY || '+1 (719) 838-9991';
-  var EMAIL  = C.EMAIL || 'connect@growxtech-it.us';
+  var EMAIL  = C.EMAIL || 'hi@growxtech-it.us';
   var AVATAR = '/assets/grobo-avatar.webp';
   var BODY   = '/assets/grobo-hero.webp';
 
