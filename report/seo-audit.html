@@ -320,7 +320,7 @@ a{color:var(--accent-deep);}
 
 <div class="wrap">
 
-  <div class="eyebrow"><span class="dot"></span> Growx Tech IT &nbsp;·&nbsp; <b>Competitive SEO / AEO Audit</b> &nbsp;·&nbsp; Aug 28, 2026</div>
+  <div class="eyebrow"><span class="dot"></span> Growx Tech IT &nbsp;·&nbsp; <b>Competitive SEO / AEO Audit</b> &nbsp;·&nbsp; Aug 28, 2026 <span style="opacity:.6">(updated Aug 30)</span></div>
 
   <h1>Every competitor checked, and what <em>growxtech-it.us</em> is missing that they aren't.</h1>
   <p class="dek">8 competitor sites pulled apart for schema, content depth and structure, benchmarked against growxtech-it.us, plus the answer-engine (AEO) fixes shipped to your own site today.</p>
@@ -463,9 +463,55 @@ a{color:var(--accent-deep);}
     <li><span class="rank">4</span><div><b>AggregateRating, once there's a real count</b><p>Once you're collecting reviews on Google or Trustpilot, that star count can go into the schema honestly, not before.</p></div></li>
   </ol>
 
+  <h2><span class="no">05</span> Aug 30 update: two days later</h2>
+  <p class="section-note">Re-checked live, direct from growxtech-it.us and each competitor. Most of "recommended next" from Aug 28 is now done.</p>
+
+  <div class="headline">
+    <span class="k">What changed since Aug 28</span>
+    <p>The three biggest gaps flagged two days ago are closed: <b>the blog exists</b> (3 posts + hub, question-format titles as recommended), <b>9 city landing pages are live</b> (Atlanta, Austin, Boston, Chicago, Dallas–Fort Worth, New York City, Raleigh–Durham, Seattle, Silicon Valley — more than the "2–3" originally suggested), and the <b>review schema now carries 8 real reviews</b> (5 candidate + 3 B2B) backing a 4.9 <code>aggregateRating</code>, all pulled from real Google Business reviews, none invented. Indexable pages went from 7 to 51.</p>
+  </div>
+
+  <div class="shipped">
+    <div class="ship-row">
+      <div class="ship-tag">FOUND&nbsp;+&nbsp;FIXED</div>
+      <div class="ship-body">
+        <b>No social preview image anywhere on the site</b>
+        <p>Every page had <code>og:title</code>/<code>og:description</code> but zero <code>og:image</code>, and <code>twitter:card</code> was set to <code>summary</code> (small thumbnail) on the homepage only, missing entirely on the other 50 pages. Any link shared to WhatsApp, LinkedIn, or iMessage rendered as plain text with no visual, a real drag on click-through for a business that leans on WhatsApp sharing. Fixed: a branded 1200×630 share card was designed and added as <code>og:image</code> + <code>twitter:image</code> (<code>summary_large_image</code>) across all 51 pages.</p>
+      </div>
+    </div>
+    <div class="ship-row">
+      <div class="ship-tag">VERIFIED</div>
+      <div class="ship-body">
+        <b>Schema, sitemap, robots.txt, llms.txt all re-confirmed live</b>
+        <p>Fetched growxtech-it.us directly and confirmed <code>application/ld+json</code> is present on every page type checked (homepage, course, location, jobs, blog) — not just the homepage. Sitemap correctly lists all 51 pages including the blog hub and all 3 posts, with <code>lastmod</code> refreshed to today. AI-crawler allowlist and <code>llms.txt</code> from the Aug 28 pass are both still live.</p>
+      </div>
+    </div>
+    <div class="ship-row">
+      <div class="ship-tag">RE-CHECKED</div>
+      <div class="ship-body">
+        <b>Competitor set: 8 originals unchanged, 4 more spotted</b>
+        <p>The 8 competitors above were spot-checked again; no structural changes to their sites. Four more names surfaced in this pass: Napsa Solutions, IT Tutor Pro, JobSpot, and IIT Workforce. Not yet given the full dossier treatment above; flag if you want them fully audited next.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="no">06</span> Showing up when someone searches a competitor's name</h2>
+  <p class="section-note">The direct question asked: can Growx appear when someone searches a competitor by name.</p>
+
+  <div class="headline">
+    <span class="k">Short answer</span>
+    <p><b>Organically outranking a competitor on their own brand name is unrealistic</b> — Google strongly favors the actual company for its own name, and no on-site SEO fix changes that. Two levers actually work, each with a real tradeoff:</p>
+  </div>
+
+  <ol class="nextup">
+    <li><span class="rank">1</span><div><b>Comparison / "alternatives" content</b><p>A page like "Growx Tech IT vs. [Competitor]" or "Alternatives to [Competitor]" can rank for those search terms and is what AI answer engines (ChatGPT, Perplexity, Google AI Overviews) tend to cite when someone asks "is X good" or "alternatives to X." Naming a real competitor is legally allowed as truthful comparison (nominative fair use), but the copy has to stay factual and non-disparaging — false or misleading claims about a named competitor carry real legal risk (Lanham Act). This is a content-and-tone decision, not just a technical one.</p></div></li>
+    <li><span class="rank">2</span><div><b>Google Ads: bid on competitor brand names as keywords</b><p>Google's policy explicitly allows bidding on a competitor's name as an ad keyword — that's how a Growx ad can appear when someone searches a competitor's name. What's restricted is putting the competitor's name in the ad headline/copy itself (narrow exceptions apply). This is a paid, ongoing spend, not a one-time fix, and is separate from the organic work above.</p></div></li>
+  </ol>
+  <p class="section-note">Neither of these has been built yet — worth a direct decision on which to pursue, since naming real competitors publicly is a business call, not just a technical one.</p>
+
   <footer>
     <span>growxtech-it.us · internal audit</span>
-    <span>Sources: direct fetch of each competitor site, checked live</span>
+    <span>Updated Aug 30, 2026 · direct fetch of growxtech-it.us + each competitor site, checked live</span>
   </footer>
 
 </div>
