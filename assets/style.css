@@ -737,6 +737,10 @@ img, video, canvas, table{max-width:100%;}
 @media (prefers-reduced-motion:no-preference){ .page-mascot{animation:grobo-bob 5.4s ease-in-out infinite;} }
 @media (max-width:900px){ .page-mascot{width:108px; right:98px; opacity:.9;} }
 @media (max-width:600px){ .page-mascot{display:none;} }
+/* keep the hero headline/chips clear of Charlie so he never covers the text */
+@media (min-width:901px){
+  .page-hero:has(.page-mascot) .container{padding-right:210px;}
+}
 .flagimg{width:26px; height:auto; border-radius:3px; display:inline-block; vertical-align:-4px; box-shadow:0 1px 4px rgba(0,0,0,.5);}
 .offices .flag{font-size:1rem; line-height:1;}
 .ico-mascot{width:54px; height:54px; border-radius:50%; object-fit:cover; object-position:top center; background:rgba(255,255,255,.9); display:block; margin-bottom:12px; box-shadow:0 0 0 2px rgba(243,159,27,.5);}
