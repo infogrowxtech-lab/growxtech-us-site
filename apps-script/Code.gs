@@ -1,8 +1,26 @@
-/** Growx lead catcher - writes site leads into the "Growx Leads" sheet. */
+/** Growx lead catcher - writes site leads into the "Growx Leads" sheet.
+ *
+ *  Anti-spam gate (added Aug 30, 2026): this URL is public by necessity
+ *  (it has to be callable from the browser), so previously it was wide
+ *  open to anyone who found it, no check at all before a row got written
+ *  and an email got sent. Two cheap checks now filter out generic bots
+ *  and scrapers before anything touches the sheet:
+ *    - _k must match SITE_KEY (sent automatically by every real page)
+ *    - _hp (the honeypot field) must be empty (a real visitor never
+ *      fills it in; only a bot that blindly fills every field on a
+ *      form does)
+ *  A targeted human attacker who reads the site's JS can still find
+ *  SITE_KEY, this is a spam/bot filter, not encryption, but it stops
+ *  the overwhelming majority of automated abuse with zero cost and no
+ *  CAPTCHA friction for real visitors.
+ */
 
 var SHEET_ID = '1c875Kxk7VxrlPOCYEWsEkTmRZbL9fzf_OBPlv4r1gFw';
 var NOTIFY_TO = 'info.growxtech@gmail.com';
 var BASE = ['Timestamp', 'type', 'name', 'email', 'phone', 'target', 'note', 'page', 'source'];
+
+// Must match GX.LEAD_KEY in assets/config.js exactly.
+var SITE_KEY = '6ca5024bcd3628dd5ad87924d0fd2fb2';
 
 function doGet() {
   return ContentService.createTextOutput('Growx lead catcher is running.');
@@ -17,6 +35,16 @@ function doPost(e) {
     } else if (e && e.parameter) {
       data = e.parameter;
     }
+
+    // Spam gate: wrong/missing key, or the honeypot got filled in.
+    // Responds ok:true either way so a bot probing the endpoint learns
+    // nothing about why its request was dropped.
+    if (data._k !== SITE_KEY || String(data._hp || '').trim() !== '') {
+      return json({ ok: true });
+    }
+    delete data._k;
+    delete data._hp;
+
     save(data);
     try { notify(data); } catch (mailErr) {}
     return json({ ok: true });

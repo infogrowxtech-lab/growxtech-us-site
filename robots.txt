@@ -41,4 +41,46 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# Bulk data / SEO-intelligence scrapers - blocked. These tools copy pricing,
+# page content and site structure wholesale for competitor research; they
+# are not how real customers or AI assistants find growxtech-it.us.
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SerpstatBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: spbot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
 Sitemap: https://growxtech-it.us/sitemap.xml

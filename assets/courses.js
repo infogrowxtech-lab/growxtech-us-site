@@ -6,8 +6,9 @@
      - a free certificate, unlocked once the watch threshold is hit
    Certificates are generated entirely client-side on a <canvas> and
    downloaded as a PNG. No account, no payment, no upload of anything
-   except (optionally) a name + email, which is passed into the same
-   lead pipeline every other form on this site uses.
+   except a name, email and phone number (all three required), which
+   is passed into the same lead pipeline every other form on this
+   site uses.
    ------------------------------------------------------------------ */
 window.GX = window.GX || {};
 
@@ -273,12 +274,32 @@ GX.Courses = (function () {
       });
     }
 
+    var PHONE_RE = /^[+()\-\s\d]{7,20}$/;
+
+    // A custom validity message sticks until JS clears it, including across
+    // separate submit attempts, so without this a first bad phone number
+    // would silently block every later attempt even after it's corrected
+    // (the browser would refuse to fire the 'submit' event at all).
+    var certPhoneEl = document.getElementById('gxCertPhone');
+    if (certPhoneEl) {
+      certPhoneEl.addEventListener('input', function () { certPhoneEl.setCustomValidity(''); });
+    }
+
     if (certForm) {
       certForm.addEventListener('submit', function (ev) {
         ev.preventDefault();
         var name = document.getElementById('gxCertName').value.trim();
         var email = document.getElementById('gxCertEmail').value.trim();
+        var phoneEl = document.getElementById('gxCertPhone');
+        var phone = phoneEl ? phoneEl.value.trim() : '';
+        var hpEl = document.getElementById('gxCertHp');
+        var hp = hpEl ? hpEl.value : '';
         if (!name || !email) return;
+        if (phoneEl) phoneEl.setCustomValidity('');
+        if (!phone || !PHONE_RE.test(phone)) {
+          if (phoneEl) { phoneEl.focus(); phoneEl.setCustomValidity('Enter a phone number with country code, like +1 555 123 4567.'); phoneEl.reportValidity(); }
+          return;
+        }
 
         var id = certId(course.title, name);
         var date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -291,8 +312,10 @@ GX.Courses = (function () {
               type: 'course-certificate',
               name: name,
               email: email,
+              phone: phone,
               target: course.title,
-              note: 'Completed free course "' + course.title + '", certificate ' + id
+              note: 'Completed free course "' + course.title + '", certificate ' + id,
+              _hp: hp
             });
           }
 

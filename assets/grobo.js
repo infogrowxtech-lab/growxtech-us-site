@@ -342,7 +342,7 @@
     mem.data = { type: 'enquiry', note: note || '' };
     var opener = mem.profile.name
       ? 'Right ' + esc(mem.profile.name) + ', let me get an advisor onto this. What <b>role and country</b> are you targeting?'
-      : 'Happy to get that moving. Three quick questions and an advisor takes it from there.<br><br>What is your <b>name</b>?';
+      : 'Happy to get that moving. A few quick questions and an advisor takes it from there.<br><br>What is your <b>name</b>?';
     if (mem.profile.name) { mem.data.name = mem.profile.name; mem.step = 2; }
     botSay(opener);
     setChips([]);
@@ -430,13 +430,21 @@
         if (!looksLikeName(t)) { botSay('Just your name here, so they can find your file.'); return true; }
         t = cleanName(t);
         mem.data.name = t; mem.profile.name = t.split(' ')[0]; mem.step = 3;
-        botSay('Thanks ' + esc(mem.profile.name) + '. What is the <b>email or phone</b> you registered with? That is how they will find your record.<br><br>Nothing else, no card or ID numbers.');
+        botSay('Thanks ' + esc(mem.profile.name) + '. What is your <b>phone number</b>, with the country code? That is how the team will reach you on this.');
         return true;
       }
       if (mem.step === 3) {
-        mem.data.contact = t;
+        if (!PHONE_RE.test(t)) { botSay('That number looks off to me. Try it with the country code, like +1 555 123 4567.'); return true; }
+        mem.data.phone = t; mem.step = 4;
+        botSay('Got it. And an <b>email</b> too, in case that is easier for them to reach you on? (Optional, you can say "skip".)');
+        return true;
+      }
+      if (mem.step === 4) {
+        if (!/^skip$/i.test(t.trim())) {
+          if (EMAIL_RE.test(t)) mem.data.email = t;
+        }
         deliver('Logged and marked <b>urgent</b>. &#9989; Someone will come back to you on this.<br><br>I am not going to promise you an outcome, because that is not mine to promise. What I can tell you is it is no longer sitting in a chat window.<br><br>If you want to push it faster, go straight to the team, it is the same people either way.',
-                'Hi Growx Tech IT, I raised a complaint through Charlie.\nName: ' + mem.data.name + '\nContact: ' + t + '\nIssue: ' + mem.data.issue);
+                'Hi Growx Tech IT, I raised a complaint through Charlie.\nName: ' + mem.data.name + '\nPhone: ' + mem.data.phone + (mem.data.email ? '\nEmail: ' + mem.data.email : '') + '\nIssue: ' + mem.data.issue);
         return true;
       }
     }
@@ -450,12 +458,19 @@
       }
       if (mem.step === 2) {
         mem.data.target = t; mem.profile.role = t; mem.step = 3;
-        botSay('Noted. What is the best <b>email or phone number</b> to reach you on?'); return true;
+        botSay('Noted. What is your <b>phone number</b>, with the country code, so an advisor can reach you?'); return true;
       }
       if (mem.step === 3) {
-        mem.data.contact = t;
+        if (!PHONE_RE.test(t)) { botSay('That number looks off to me. Try it with the country code, like +1 555 123 4567.'); return true; }
+        mem.data.phone = t; mem.step = 4;
+        botSay('And your <b>email</b>? (Optional, you can say "skip".)'); return true;
+      }
+      if (mem.step === 4) {
+        if (!/^skip$/i.test(t.trim())) {
+          if (EMAIL_RE.test(t)) mem.data.email = t;
+        }
         deliver('Perfect, an advisor has your details and will reach out within one working day. &#9989;<br><br>The first conversation is free and there is no obligation, worst case you get an honest read on where you stand.',
-                'Hi Growx Tech IT, I spoke to Charlie.\nName: ' + mem.data.name + '\nTarget: ' + mem.data.target + '\nContact: ' + t);
+                'Hi Growx Tech IT, I spoke to Charlie.\nName: ' + mem.data.name + '\nPhone: ' + mem.data.phone + (mem.data.email ? '\nEmail: ' + mem.data.email : '') + '\nTarget: ' + mem.data.target);
         return true;
       }
     }

@@ -909,6 +909,10 @@ img, video, canvas, table{max-width:100%;}
    the certificate form and the download button show up on every course
    page immediately, before the certificate is even unlocked. */
 .cert-form[hidden], .cert-download[hidden]{display:none;}
+/* honeypot: present in the DOM for bots that blindly fill every field,
+   invisible and unreachable for real visitors (not display:none, some
+   bots skip those; this is the standard robust pattern). */
+.cert-hp{position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; white-space:nowrap !important; border:0 !important;}
 .outcomes{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px;}
 .outcomes li{display:flex; gap:10px; align-items:flex-start; font-size:.92rem; color:var(--ink);}
 .outcomes li::before{content:"✓"; color:var(--orange); font-weight:700; flex:none;}
