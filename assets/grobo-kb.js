@@ -107,8 +107,8 @@ window.GROBO_KB = (function () {
     k:['profile marketing','marketing','recruiter','apply for me','applications','submit my profile','market my profile','dedicated recruiter','100 applications'],
     a:[
       'This is the part most people cannot do alone. A <b>dedicated recruiter</b> markets your profile every day to targeted employers, staffing partners and hiring networks, and coordinates every interview.<br><br>From <b>$2,500</b>. Extended reach is $3,500, and the placement track aimed at 10 final-round interviews is $4,000.',
-      'Recruiter-led marketing means someone on our side is actively pushing your profile out, up to 100 targeted applications a day, with daily activity reports and interview scheduling handled.<br><br>Starts at <b>$2,500</b>. There is also the all-in plan at 8.5% of first-year salary with nothing upfront.',
-      'A personal recruiter takes over the outreach: targeted applications, employer follow-ups, interview coordination and daily reports to you. From <b>$2,500</b>, or bundled into the 8.5% Placement Partner plan.'
+      'Recruiter-led marketing means someone on our side is actively pushing your profile out, up to 100 targeted applications a day, with daily activity reports and interview scheduling handled.<br><br>Starts at <b>$2,500</b>. There is also the all-in plan: $1,000 enrollment plus <b>8.5% of first-year salary</b>, that 8.5% billed only after you accept an offer.',
+      'A personal recruiter takes over the outreach: targeted applications, employer follow-ups, interview coordination and daily reports to you. From <b>$2,500</b>, or bundled into the Placement Partner plan ($1,000 enrollment + 8.5% after you are placed).'
     ],
     chips:['8.5% plan','Pricing','Get a recruiter'] },
 
@@ -149,26 +149,26 @@ window.GROBO_KB = (function () {
   { id:'pricing', w:2,
     k:['price','pricing','cost','fee','fees','charge','charges','how much','rate','rates','payment','expensive','cheap','budget','kitna','paisa','package','packages','which package','package fits','plan','plans','tiers'],
     a:[
-      'Here is the whole thing, no hidden numbers:<br>• <b>Resume and LinkedIn</b>, $200 / $400 / $600<br>• <b>Technical training</b>, $600 / $800 / $1,000<br>• <b>Recruiter-led marketing</b>, $2,500 / $3,500 / $4,000<br>• <b>All-in Placement Partner</b>, 8.5% of first-year salary, nothing upfront<br><br>Full breakdown on the <a href="/pricing">pricing page</a>. Where are you in your search? I can tell you which one actually fits.',
-      'Four tracks:<br><b>01</b> Resume and profile, from $200<br><b>02</b> Training, from $600<br><b>03</b> Recruiter marketing, from $2,500<br><b>04</b> Everything in one, 8.5% of your annual pay package, paid only after you accept an offer<br><br>The initial consultation is free either way, and honestly, sometimes the cheapest option is enough. Tell me your situation.',
-      'Prices start at <b>$200</b> for a resume rebuild and go up to full recruiter-led placement. There is also the 8.5% plan where you pay nothing until you have an offer in hand.<br><br>Rather than guess, tell me your target role and where you are stuck and I will say which track makes sense.'
+      'Here is the whole thing, no hidden numbers:<br>• <b>Resume and LinkedIn</b>, $200 / $400 / $600<br>• <b>Technical training</b>, $600 / $800 / $1,000<br>• <b>Recruiter-led marketing</b>, $2,500 / $3,500 / $4,000<br>• <b>All-in Placement Partner</b>, $1,000 enrollment fee plus 8.5% of first-year salary (that 8.5% billed only after an offer)<br><br>Full breakdown on the <a href="/pricing">pricing page</a>. Where are you in your search? I can tell you which one actually fits.',
+      'Four tracks:<br><b>01</b> Resume and profile, from $200<br><b>02</b> Training, from $600<br><b>03</b> Recruiter marketing, from $2,500<br><b>04</b> Everything in one, $1,000 enrollment fee plus 8.5% of your annual pay package, that 8.5% paid only after you accept an offer<br><br>The initial consultation is free either way, and honestly, sometimes the cheapest option is enough. Tell me your situation.',
+      'Prices start at <b>$200</b> for a resume rebuild and go up to full recruiter-led placement. There is also the all-in plan: a $1,000 enrollment fee, then 8.5% more only once you have an offer in hand.<br><br>Rather than guess, tell me your target role and where you are stuck and I will say which track makes sense.'
     ],
     chips:['8.5% plan','Resume price','Training price','Payment terms'] },
 
   { id:'price_allin', w:3,
-    k:['8.5','8.5%','eight point five','percentage','percent','annual pay','salary based','no upfront','nothing upfront','success fee','pay after job','placement partner'],
+    k:['8.5','8.5%','eight point five','percentage','percent','annual pay','salary based','no upfront','nothing upfront','success fee','pay after job','placement partner','enrollment fee','enrollment'],
     a:[
-      'That is the <b>All-in Placement Partner</b> plan. You get everything: resume rebuild, LinkedIn makeover, full technical training, unlimited mock interviews, a dedicated recruiter marketing you daily, interview scheduling, offer negotiation and post-placement mentorship.<br><br>You pay <b>8.5% of your first-year salary</b>, and only after you accept an offer. Nothing upfront.',
-      'The 8.5% plan bundles every service into one, and the fee is charged against your first-year salary once you have accepted an offer. Before that, you pay nothing.<br><br>It suits people who want the full engine behind them without paying package by package.',
-      '8.5% of your annual pay package, billed after you sign, covering the complete service from resume through to mentorship after joining. The exact terms get confirmed in writing before anything starts, so nothing is a surprise. {{both:Hi, tell me more about the 8.5% Placement Partner plan.}}'
+      'That is the <b>All-in Placement Partner</b> plan. You get everything: resume rebuild, LinkedIn makeover, full technical training, unlimited mock interviews, a dedicated recruiter marketing you daily, interview scheduling, offer negotiation and post-placement mentorship.<br><br>It is $1,000 enrollment at sign-up to unlock all of that, plus <b>8.5% of your first-year salary</b>, and that 8.5% only once you accept an offer.',
+      'The Placement Partner plan bundles every service into one: $1,000 to enroll, then 8.5% of your first-year salary once you have accepted an offer.<br><br>It suits people who want the full engine behind them without paying package by package.',
+      '$1,000 enrollment fee upfront, plus 8.5% of your annual pay package billed after you sign, covering the complete service from resume through to mentorship after joining. The exact terms get confirmed in writing before anything starts, so nothing is a surprise. {{both:Hi, tell me more about the Placement Partner plan.}}'
     ],
     chips:['Other packages','Payment terms','I am interested'] },
 
   { id:'payment_terms', w:2,
     k:['payment terms','installment','emi','instalment','advance','upfront','when do i pay','30%','how to pay','pay in parts'],
     a:[
-      'For the fixed-price packages it is <b>30% at registration</b> and the balance after the initial delivery milestones. So you see work before you pay the rest.<br><br>The 8.5% Placement Partner plan is different, nothing upfront, you pay only after an offer is accepted.',
-      'Standard terms: 30% to start, the rest once the first deliverables are in your hands. On the all-in 8.5% plan there is no upfront payment at all.<br><br>Anything beyond that, an advisor confirms in writing before you commit.',
+      'For the fixed-price packages it is <b>30% at registration</b> and the balance after the initial delivery milestones. So you see work before you pay the rest.<br><br>The Placement Partner plan works differently: $1,000 enrollment upfront, then <b>8.5%</b> of your first-year salary only once an offer is accepted.',
+      'Standard terms: 30% to start, the rest once the first deliverables are in your hands. On the all-in Placement Partner plan it is $1,000 to enroll, then 8.5% after you are placed, nothing more before that.<br><br>Anything beyond that, an advisor confirms in writing before you commit.',
       '30% at registration, remainder after delivery milestones. Currency is USD. The consultation before all of that is free.'
     ] },
 

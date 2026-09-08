@@ -109,6 +109,7 @@
       <button class="btn btn-grobo" data-grobo="Hi, I'd like a free career consultation. Here's my target role:"><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Chat with Charlie</button>
       <a class="btn btn-call" href="tel:+17198389991">📞 Call +1 (719) 838-9991</a>
       <a class="btn btn-wa" href="https://wa.me/13026831622?text=Hi%20Growx%20Tech%20IT%2C%20I%27d%20like%20a%20free%20career%20consultation." target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn btn-ghost" href="#book">📅 Book a free call</a>
     </div>
   </div>
 </header>
@@ -161,6 +162,50 @@
       <div class="jstep sr d1"><span class="num">2</span><h3>Your target role</h3><p>The job title you want, and the country you want it in.</p></div>
       <div class="jstep sr d2"><span class="num">3</span><h3>Your work authorization</h3><p>Citizen, green card, H-1B, OPT/CPT, or needs sponsorship, it changes what's realistic.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="book" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container narrow">
+    <div class="section-head sr">
+      <span class="label">Prefer not to chat right now?</span>
+      <h2>Book a free consultation</h2>
+      <p>Leave your details and a good time to reach you — a career advisor will call or email you back, usually within one business day.</p>
+    </div>
+    <form name="consultation-request" method="POST" data-netlify="true" netlify-honeypot="bb-field" class="consult-form sr" id="consultForm">
+      <input type="hidden" name="form-name" value="consultation-request">
+      <p class="hp-field"><label>Don't fill this out if you're human: <input name="bb-field"></label></p>
+      <div class="cf-row">
+        <div class="cf-field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="cf-field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="cf-row">
+        <div class="cf-field"><label for="cf-phone">Phone / WhatsApp</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="cf-field"><label for="cf-country">Where are you targeting jobs?</label>
+          <select id="cf-country" name="target_country">
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Australia</option>
+            <option>Other / not sure yet</option>
+          </select>
+        </div>
+      </div>
+      <div class="cf-row">
+        <div class="cf-field"><label for="cf-service">What do you need help with?</label>
+          <select id="cf-service" name="service">
+            <option>Resume &amp; LinkedIn optimization</option>
+            <option>Technical training</option>
+            <option>Interview preparation</option>
+            <option>Full placement package</option>
+            <option>Not sure — just exploring</option>
+          </select>
+        </div>
+        <div class="cf-field"><label for="cf-time">Best time to reach you</label><input id="cf-time" name="preferred_time" type="text" placeholder="e.g. Weekday evenings, EST"></div>
+      </div>
+      <div class="cf-field cf-full"><label for="cf-msg">Anything else?</label><textarea id="cf-msg" name="message" placeholder="Current role, target role, work authorization…"></textarea></div>
+      <button class="btn btn-primary btn-lg" type="submit">Request a call back</button>
+      <p class="cf-note" id="cfNote" hidden></p>
+    </form>
   </div>
 </section>
 
@@ -240,6 +285,17 @@
           <li><a href="https://www.threads.com/@growxtechit" rel="noopener" target="_blank" aria-label="Threads"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-threads"></use></svg></a></li>
           <li><a href="https://x.com/growxtechit" rel="noopener" target="_blank" aria-label="Twitter / X"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-x"></use></svg></a></li>
         </ul>
+        <div class="foot-news">
+          <h4>Job market updates</h4>
+          <p>One email a week: new openings, hiring trends, and career tips. No spam.</p>
+          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="nl-bot-field" class="foot-news-form" id="newsForm">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p class="hp-field"><label>Don't fill this out if you're human: <input name="nl-bot-field"></label></p>
+            <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="foot-news-note" id="newsNote" hidden></p>
+        </div>
       </div>
     </div>
     <div class="foot-bottom">
@@ -255,5 +311,6 @@
 <script src="/assets/grobo-kb.js" defer></script>
 <script src="/assets/grobo.js" defer></script>
 <script src="/assets/intro.js" defer></script>
+<script src="/assets/forms.js" defer></script>
 </body>
 </html>

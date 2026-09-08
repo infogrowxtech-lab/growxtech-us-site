@@ -987,3 +987,38 @@ img, video, canvas, table{max-width:100%;}
   .article-body{max-width:100%;}
   .article-sources{max-width:100%;}
 }
+
+/* Consultation-request / lead-capture form (Netlify Forms) */
+.consult-form{max-width:640px; margin:0 auto;}
+.cf-row{display:flex; gap:18px; flex-wrap:wrap; margin-bottom:16px;}
+.cf-field{flex:1 1 240px; display:flex; flex-direction:column; gap:6px;}
+.cf-field.cf-full{flex-basis:100%; margin-bottom:16px;}
+.cf-field label{font-size:.82rem; color:var(--muted); font-weight:600;}
+.cf-field input, .cf-field select, .cf-field textarea{
+  background:var(--surface); border:1px solid var(--line); border-radius:11px;
+  padding:12px 14px; color:var(--ink); font:inherit; font-size:.95rem; width:100%;
+}
+.cf-field input::placeholder, .cf-field textarea::placeholder{color:var(--muted); opacity:.8;}
+.cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus{outline:2px solid var(--cyan); outline-offset:1px; border-color:var(--cyan);}
+.cf-field select{appearance:none; background-image:linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position:calc(100% - 18px) center, calc(100% - 13px) center; background-size:5px 5px, 5px 5px; background-repeat:no-repeat;}
+.consult-form textarea{resize:vertical; min-height:84px;}
+.hp-field{position:absolute; left:-9999px; top:-9999px;}
+.cf-note{margin-top:14px; font-size:.88rem; color:var(--muted);}
+.cf-note.ok{color:var(--wa); font-weight:600;}
+.cf-note.err{color:var(--orange); font-weight:600;}
+
+/* Newsletter signup (footer, Netlify Forms) */
+.foot-news{margin-top:18px; padding-top:18px; border-top:1px solid var(--line);}
+.foot-news h4{margin:0 0 8px;}
+.foot-news p{color:var(--muted); font-size:.82rem; margin:0 0 10px;}
+.foot-news-form{display:flex; gap:8px; flex-wrap:wrap;}
+.foot-news-form input[type="email"]{
+  flex:1 1 160px; background:var(--surface); border:1px solid var(--line); border-radius:9px;
+  padding:9px 12px; color:var(--ink); font:inherit; font-size:.86rem; min-width:0;
+}
+.foot-news-form input[type="email"]:focus{outline:2px solid var(--cyan); outline-offset:1px;}
+.foot-news-form button{
+  background:linear-gradient(92deg, var(--cyan), var(--violet)); color:#04101C; border:none;
+  border-radius:9px; padding:9px 16px; font-weight:700; font-size:.86rem; cursor:pointer; white-space:nowrap;
+}
+.foot-news-note{font-size:.76rem; color:var(--muted); margin:8px 0 0; min-height:1em;}

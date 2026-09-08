@@ -237,7 +237,7 @@
         <button class="btn btn-ghost" data-grobo="Hi, I'm interested in Profile Marketing"><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Get a Recruiter</button>
       </div>
     </div>
-    <p class="pnote">All-in Placement Partner: 8.5% of your first-year salary, charged only after you accept an offer, no upfront cost. Full package details and payment terms on the <a href="/pricing" style="color:var(--cyan);">pricing page</a>.</p>
+    <p class="pnote">All-in Placement Partner: $1,000 enrollment fee, plus 8.5% of your first-year salary charged only after you accept an offer. Full package details and payment terms on the <a href="/pricing" style="color:var(--cyan);">pricing page</a>.</p>
   </div>
 </section>
 
@@ -274,6 +274,7 @@
       <div class="actions">
         <button class="btn btn-grobo" data-grobo="Hi, here's my resume and target role"><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Chat with Charlie</button>
         <a class="btn btn-primary" href="tel:+17198389991">📞 Call +1 (719) 838-9991</a>
+        <a class="btn btn-ghost" href="/contact#book">📅 Book a free call</a>
       </div>
     </div>
   </div>
@@ -318,6 +319,17 @@
           <li><a href="https://www.threads.com/@growxtechit" rel="noopener" target="_blank" aria-label="Threads"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-threads"></use></svg></a></li>
           <li><a href="https://x.com/growxtechit" rel="noopener" target="_blank" aria-label="Twitter / X"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-x"></use></svg></a></li>
         </ul>
+        <div class="foot-news">
+          <h4>Job market updates</h4>
+          <p>One email a week: new openings, hiring trends, and career tips. No spam.</p>
+          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="nl-bot-field" class="foot-news-form" id="newsForm">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p class="hp-field"><label>Don't fill this out if you're human: <input name="nl-bot-field"></label></p>
+            <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="foot-news-note" id="newsNote" hidden></p>
+        </div>
       </div>
     </div>
     <div class="foot-bottom">
@@ -333,5 +345,6 @@
 <script src="/assets/grobo-kb.js" defer></script>
 <script src="/assets/grobo.js" defer></script>
 <script src="/assets/intro.js" defer></script>
+<script src="/assets/forms.js" defer></script>
 </body>
 </html>

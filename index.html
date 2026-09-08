@@ -188,6 +188,7 @@
       <div class="hero-actions">
         <button class="btn btn-grobo btn-lg" data-grobo=""><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Ask Charlie</button>
         <a class="btn btn-call btn-lg" href="tel:+17198389991">📞 Call +1 (719) 838-9991</a>
+        <a class="btn btn-ghost btn-lg" href="/contact#book">📅 Book a free call</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><b data-count="800">0</b><span>Successful placements</span></div>
@@ -499,6 +500,17 @@
           <li><a href="https://www.threads.com/@growxtechit" rel="noopener" target="_blank" aria-label="Threads"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-threads"></use></svg></a></li>
           <li><a href="https://x.com/growxtechit" rel="noopener" target="_blank" aria-label="Twitter / X"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-x"></use></svg></a></li>
         </ul>
+        <div class="foot-news">
+          <h4>Job market updates</h4>
+          <p>One email a week: new openings, hiring trends, and career tips. No spam.</p>
+          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="nl-bot-field" class="foot-news-form" id="newsForm">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p class="hp-field"><label>Don't fill this out if you're human: <input name="nl-bot-field"></label></p>
+            <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="foot-news-note" id="newsNote" hidden></p>
+        </div>
       </div>
     </div>
     <div class="foot-bottom">
@@ -515,5 +527,6 @@
 <script src="/assets/grobo-kb.js" defer></script>
 <script src="/assets/grobo.js" defer></script>
 <script src="/assets/intro.js" defer></script>
+<script src="/assets/forms.js" defer></script>
 </body>
 </html>

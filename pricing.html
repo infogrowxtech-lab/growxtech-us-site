@@ -13,7 +13,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing: Resume, Training &amp; Placement Packages | Growx Tech IT</title>
-<meta name="description" content="Transparent pricing for IT career services. Resume writing from $200, LinkedIn optimization $600, technical training from $600, and recruiter-led profile marketing from $2,500, or the all-in Placement Partner plan at 8.5% of your annual pay package.">
+<meta name="description" content="Transparent pricing for IT career services. Resume writing from $200, LinkedIn optimization $600, technical training from $600, and recruiter-led profile marketing from $2,500, or the all-in Placement Partner plan: $1,000 enrollment plus 8.5% of your first-year salary, billed only after you accept an offer.">
 <link rel="canonical" href="https://growxtech-it.us/pricing">
   <link rel="alternate" hreflang="en-us" href="https://growxtech-it.us/pricing">
   <link rel="alternate" hreflang="en-ca" href="https://growxtech-it.us/pricing">
@@ -63,7 +63,7 @@
     {"@type":"Offer","name":"Profile Marketing, 100 Applications Per Day","price":"2500","priceCurrency":"USD","itemOffered":{"@type":"Service","name":"Recruiter-led profile marketing"}},
     {"@type":"Offer","name":"Personal Recruiter + Extended Applications","price":"3500","priceCurrency":"USD","itemOffered":{"@type":"Service","name":"Dedicated recruiter with extended application volume"}},
     {"@type":"Offer","name":"Placement Track, 10 Final Interview Opportunities","price":"4000","priceCurrency":"USD","itemOffered":{"@type":"Service","name":"Placement track targeting final-round interviews"}},
-    {"@type":"Offer","name":"All-in Placement Partner","priceCurrency":"USD","priceSpecification":{"@type":"PriceSpecification","description":"8.5% of the candidate's annual pay package, charged only after an offer is accepted"},"itemOffered":{"@type":"Service","name":"Complete placement partnership: resume, LinkedIn, training, interview preparation, recruiter-led marketing and post-placement mentorship"}}
+    {"@type":"Offer","name":"All-in Placement Partner","priceCurrency":"USD","priceSpecification":{"@type":"PriceSpecification","description":"$1,000 enrollment fee due at sign-up, plus 8.5% of the candidate's first-year salary charged only after an offer is accepted"},"itemOffered":{"@type":"Service","name":"Complete placement partnership: resume, LinkedIn, training, interview preparation, recruiter-led marketing and post-placement mentorship"}}
   ]
 }
 </script>
@@ -124,9 +124,9 @@
       </div>
       <div class="allin-price">
         <div class="ap-num">8.5<span>%</span></div>
-        <div class="ap-of">of your annual pay package</div>
-        <p class="ap-note">Nothing upfront. You pay only after you accept an offer, and it is billed against your first-year salary.</p>
-        <button class="btn btn-grobo btn-lg" data-grobo="Hi, I'd like the all-in 8.5% Placement Partner package"><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Ask Charlie about this</button>
+        <div class="ap-of">of your first-year salary, after placement</div>
+        <p class="ap-note">Plus a $1,000 enrollment fee due at sign-up, which unlocks the full package below. The 8.5% is billed only after you accept an offer.</p>
+        <button class="btn btn-grobo btn-lg" data-grobo="Hi, I'd like the all-in Placement Partner package ($1,000 enrollment + 8.5%)"><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Ask Charlie about this</button>
         <a class="btn btn-call" href="tel:+17198389991">📞 Call +1 (719) 838-9991</a>
       </div>
     </div>
@@ -312,6 +312,7 @@
       <div class="actions">
         <button class="btn btn-grobo" data-grobo="Hi, which package fits my profile?"><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Chat with Charlie</button>
         <a class="btn btn-primary" href="tel:+17198389991">📞 Call +1 (719) 838-9991</a>
+        <a class="btn btn-ghost" href="/contact#book">📅 Book a free call</a>
       </div>
     </div>
   </div>
@@ -356,6 +357,17 @@
           <li><a href="https://www.threads.com/@growxtechit" rel="noopener" target="_blank" aria-label="Threads"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-threads"></use></svg></a></li>
           <li><a href="https://x.com/growxtechit" rel="noopener" target="_blank" aria-label="Twitter / X"><svg class="ico" aria-hidden="true"><use href="/assets/icons.svg#ico-x"></use></svg></a></li>
         </ul>
+        <div class="foot-news">
+          <h4>Job market updates</h4>
+          <p>One email a week: new openings, hiring trends, and career tips. No spam.</p>
+          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="nl-bot-field" class="foot-news-form" id="newsForm">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p class="hp-field"><label>Don't fill this out if you're human: <input name="nl-bot-field"></label></p>
+            <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="foot-news-note" id="newsNote" hidden></p>
+        </div>
       </div>
     </div>
     <div class="foot-bottom">
@@ -371,5 +383,6 @@
 <script src="/assets/grobo-kb.js" defer></script>
 <script src="/assets/grobo.js" defer></script>
 <script src="/assets/intro.js" defer></script>
+<script src="/assets/forms.js" defer></script>
 </body>
 </html>
