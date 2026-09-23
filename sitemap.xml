@@ -1,409 +1,428 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://growxtech-it.us/</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/services</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/pricing</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/jobs</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/courses</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-resume-writing</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-linkedin-optimization</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-interview-prep</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-us-workplace</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-communication-skills</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-cold-emailing</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-referrals</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-beating-the-ats</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-salary-negotiation</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-python-basics</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-sql-basics</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-aws-fundamentals</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-java-basics</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-devops-basics</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-excel-for-it</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-aws-cloud-practitioner</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-azure-fundamentals</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-pmp-certification</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-comptia-a-plus</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-healthcare-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-banking-finance-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-engineering-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-education-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-retail-ecommerce-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-legal-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-logistics-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-hospitality-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-manufacturing-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/course-construction-real-estate-careers</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/locations</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-seattle</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-silicon-valley</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-austin</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-new-york-city</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-chicago</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-boston</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-dallas-fort-worth</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-atlanta</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-raleigh-durham</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-toronto</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-vancouver</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-sydney</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/location-melbourne</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/referral</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/contact</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/privacy-policy</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-ats-resume-screening</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-tech-job-search-timeline</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-linkedin-headline-mistakes</loc>
-    <lastmod>2026-08-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://growxtech-it.us/</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/services</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/pricing</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/jobs</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/courses</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/opt-clock</loc>
+<lastmod>2026-09-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-resume-writing</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-linkedin-optimization</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-interview-prep</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-us-workplace</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-communication-skills</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-cold-emailing</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-referrals</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-beating-the-ats</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-salary-negotiation</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-python-basics</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-sql-basics</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-aws-fundamentals</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-java-basics</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-devops-basics</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-excel-for-it</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-aws-cloud-practitioner</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-azure-fundamentals</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-pmp-certification</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-comptia-a-plus</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-healthcare-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-banking-finance-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-engineering-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-education-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-retail-ecommerce-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-legal-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-logistics-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-hospitality-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-manufacturing-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/course-construction-real-estate-careers</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/locations</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-seattle</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-silicon-valley</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-austin</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-new-york-city</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-chicago</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-boston</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-dallas-fort-worth</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-atlanta</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-raleigh-durham</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-toronto</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-vancouver</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-sydney</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/location-melbourne</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/referral</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/contact</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/privacy-policy</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog</loc>
+<lastmod>2026-09-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-ats-resume-screening</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-tech-job-search-timeline</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-linkedin-headline-mistakes</loc>
+<lastmod>2026-08-30</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
-  <url>
-    <loc>https://growxtech-it.us/blog-ai-layoffs-challenger-report</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-return-to-office-2026-job-search</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-tech-layoffs-2026-next-move</loc>
-    <lastmod>2026-08-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://growxtech-it.us/blog-ai-layoffs-challenger-report</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-return-to-office-2026-job-search</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-tech-layoffs-2026-next-move</loc>
+<lastmod>2026-08-31</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
-  <url>
-    <loc>https://growxtech-it.us/blog-ai-layoffs-cooled-august-restructuring</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-h1b-100k-fee-proposal-explained</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-it-job-raleigh-durham-after-layoff</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://growxtech-it.us/blog-ai-layoffs-cooled-august-restructuring</loc>
+<lastmod>2026-09-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-h1b-100k-fee-proposal-explained</loc>
+<lastmod>2026-09-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-it-job-raleigh-durham-after-layoff</loc>
+<lastmod>2026-09-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
-  <url>
-    <loc>https://growxtech-it.us/blog-september-2026-tech-layoffs-uber-paypal-apple</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-it-job-dallas-fort-worth-2026</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-tech-job-seattle-recent-graduate-2026</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://growxtech-it.us/blog-september-2026-tech-layoffs-uber-paypal-apple</loc>
+<lastmod>2026-09-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-it-job-dallas-fort-worth-2026</loc>
+<lastmod>2026-09-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-tech-job-seattle-recent-graduate-2026</loc>
+<lastmod>2026-09-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 
-  <url>
-    <loc>https://growxtech-it.us/blog-h1b-fee-blocked-september-2026-update</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-linkedin-ai-skills-time-travel-2026</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://growxtech-it.us/blog-it-job-austin-texas-2026</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+<url>
+<loc>https://growxtech-it.us/blog-h1b-fee-blocked-september-2026-update</loc>
+<lastmod>2026-09-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-linkedin-ai-skills-time-travel-2026</loc>
+<lastmod>2026-09-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-it-job-austin-texas-2026</loc>
+<lastmod>2026-09-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://growxtech-it.us/blog-opt-90-day-unemployment-rule-explained</loc>
+<lastmod>2026-09-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://growxtech-it.us/blog-stem-opt-extension-cap-gap-explained</loc>
+<lastmod>2026-09-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 </urlset>
