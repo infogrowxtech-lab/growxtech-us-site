@@ -140,6 +140,16 @@ gtag('config', 'G-ZEXZVDKPTV');
 <span id="ocSub">Your remaining days will show here.</span>
 </div>
 </div>
+
+<div class="optclock-remind" id="ocRemind">
+<h3>Want a reminder before you run low?</h3>
+<p>Leave your email and we'll check in before you're close to your limit &mdash; no spam, just a heads-up.</p>
+<form id="ocRemindForm">
+<input type="email" id="ocRemindEmail" placeholder="you@email.com" aria-label="Email address" required>
+<button type="submit" class="btn btn-grobo">Remind me</button>
+</form>
+<p class="optclock-remind-note" id="ocRemindNote" hidden></p>
+</div>
 </div>
 
 <template id="ocRowTemplate">
@@ -214,7 +224,7 @@ gtag('config', 'G-ZEXZVDKPTV');
 <p>Our recruiters market your profile to hiring managers across 11 industries while you're still counting days, not after. Free consultation to start &mdash; and ask about our commission-only All-in Placement Partner plan: nothing upfront, you only pay after you're placed.</p>
 </div>
 <div class="actions">
-<button class="btn btn-grobo btn-lg" data-grobo="">Ask Charlie now</button>
+<button class="btn btn-grobo btn-lg" data-grobo="I'm on OPT and want help with my job search before my unemployment days run out.">Ask Charlie now</button>
 <a class="btn btn-ghost" href="/pricing">See pricing</a>
 </div>
 </div>
@@ -304,6 +314,14 @@ gtag('config', 'G-ZEXZVDKPTV');
 .optclock-verdict{flex:1; min-width:200px;}
 .optclock-verdict b{display:block; font-size:1.08rem; margin-bottom:5px;}
 .optclock-verdict span{font-size:.9rem; color:var(--muted); line-height:1.5;}
+.optclock-remind{margin-top:22px; padding-top:22px; border-top:1px solid var(--line);}
+.optclock-remind h3{font-size:.98rem; margin-bottom:4px;}
+.optclock-remind p{color:var(--muted); font-size:.85rem; margin:0 0 14px;}
+#ocRemindForm{display:flex; gap:10px; flex-wrap:wrap;}
+#ocRemindForm input{flex:1; min-width:200px; background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:10px; padding:11px 14px; color:var(--ink); font-family:"Sora",sans-serif; font-size:15px; outline:none;}
+#ocRemindForm input:focus{border-color:rgba(79,216,255,.5);}
+.optclock-remind-note{font-size:.85rem; color:var(--cyan); margin:10px 0 0;}
+@media (max-width:560px){ #ocRemindForm{flex-direction:column;} #ocRemindForm .btn{width:100%; justify-content:center;} }
 .faq-head{margin-top:44px;}
 @media (max-width:640px){
 .optclock-period-row{grid-template-columns:1fr 1fr; }
@@ -397,6 +415,33 @@ sub.textContent = 'You may be out of status. Contact your school\'s DSO immediat
 
 addRow();
 compute();
+
+var remindForm = document.getElementById('ocRemindForm');
+var remindEmail = document.getElementById('ocRemindEmail');
+var remindNote = document.getElementById('ocRemindNote');
+if(remindForm){
+remindForm.addEventListener('submit', function(e){
+e.preventDefault();
+var email = remindEmail.value.trim();
+if(!email) return;
+var limit = stemEl.checked ? 150 : 90;
+var used = parseInt(usedEl.textContent, 10) || 0;
+if(window.GX && GX.submitLead){
+GX.submitLead({
+type: 'opt_reminder',
+email: email,
+opt_start: startEl.value || '',
+stem_opt: stemEl.checked ? 'yes' : 'no',
+days_limit: limit,
+days_used: used,
+days_remaining: limit - used
+});
+}
+remindForm.hidden = true;
+remindNote.hidden = false;
+remindNote.textContent = 'Got it — we\'ll check in with you before your days run low.';
+});
+}
 })();
 </script>
 
