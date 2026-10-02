@@ -64,7 +64,6 @@ PAGE = '''<!doctype html>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navmenu">
       <li><a href="/services">Services</a></li>
-      <li><a href="/pricing">Pricing</a></li>
       <li><a href="/jobs">Jobs</a></li>
       <li><a href="/courses">Free Courses</a></li>
       <li><a href="/locations">Locations</a></li>
@@ -143,7 +142,7 @@ PAGE = '''<!doctype html>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="/services">Services</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
+        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
       </div>
       <div>
         <h4>Reach us</h4>
