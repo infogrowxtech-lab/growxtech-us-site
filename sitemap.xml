@@ -314,7 +314,7 @@
 </url>
 <url>
 <loc>https://growxtech-it.us/blog</loc>
-<lastmod>2026-09-24</lastmod>
+<lastmod>2026-10-03</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -529,5 +529,24 @@
     <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://growxtech-it.us/blog-opt-placement-agency-red-flags-dhs-warning-2026</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-sponsorship-question-opt-candidates-resume</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-choosing-it-job-placement-agency-opt-h1b</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
