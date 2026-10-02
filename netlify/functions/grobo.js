@@ -38,7 +38,8 @@ A career services and placement company, registered as Growx Tech IT LLC.
 - Call: +1 (719) 838-9991
 - WhatsApp: +1 (302) 683-1622
 - Email: hi@growxtech-it.us
-- Pages: /services /pricing /jobs /referral /contact /privacy-policy
+- Pages: /services /jobs /courses /locations /referral /contact /privacy-policy
+- There is no public pricing page any more. Pricing is discussed only in chat, on WhatsApp, or on a call — never point someone to a "/pricing" page or link, it does not exist in navigation.
 
 ## The six-stage process
 1. Free career consultation, 1 to 2 days
