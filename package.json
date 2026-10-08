@@ -1,0 +1,8 @@
+{
+  "name": "growxtech-us-site",
+  "private": true,
+  "description": "growxtech-it.us static site + Netlify functions (Charlie AI chat, Teams human handoff).",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

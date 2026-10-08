@@ -66,8 +66,26 @@
     offerLead: null,     // topic that offered to take the visitor's details
     ai: null,            // null = untested, true = live, false = fell back to rules
     transcript: [],      // what the AI brain remembers
-    profile: {}          // name / role / country picked up along the way
+    profile: {},         // name / role / country picked up along the way
+    escalating: false    // true while waiting on a human reply from Teams
   };
+
+  /* one id per browser tab session, so a Teams reply finds its way back
+     to the right visitor even if they keep chatting while they wait */
+  function getSessionId() {
+    try {
+      var k = 'gx_grobo_sid';
+      var v = sessionStorage.getItem(k);
+      if (!v) {
+        v = 'gx-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+        sessionStorage.setItem(k, v);
+      }
+      return v;
+    } catch (e) {
+      return 'gx-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+    }
+  }
+  var SESSION_ID = getSessionId();
 
   /* ========================================================== matching */
   var STOP = {
@@ -522,16 +540,102 @@
     mem.transcript.push({ role: 'assistant', text: d.reply.replace(/<[^>]+>/g, ' ') });
     if (mem.transcript.length > 24) mem.transcript = mem.transcript.slice(-24);
 
-    var html = d.reply;
-    if (d.action === 'human') {
-      html += '<br><br>' + bothBtns('Hi Growx Tech IT, I was chatting with Charlie: ' + userText);
-    }
-
-    botSay(html, function () {
+    botSay(d.reply, function () {
       if (d.action === 'lead')     { startLead('ai'); return; }
       if (d.action === 'referral') { startReferral(); return; }
+      if (d.action === 'human')    { escalateToHuman(userText); return; }
       setChips(DEFAULT_CHIPS);
     });
+  }
+
+  /* =================================================== human handoff (Teams)
+     Used only when Charlie genuinely can't answer (the AI itself asked for a
+     human, or the rule-based matcher has missed the same message a few
+     times in a row). An explicit "talk to a human" / "get me your manager"
+     request still goes straight to the WhatsApp/Call buttons as before,
+     that path is intentionally instant and untouched. */
+  var ESCALATE_URL   = '/.netlify/functions/grobo-escalate';
+  var POLL_URL       = '/.netlify/functions/grobo-poll';
+  var POLL_EVERY_MS  = 4000;
+  var ESCALATE_TIMEOUT_MS = 5 * 60 * 1000; // give the team 5 minutes before falling back
+
+  /* the pre-handoff behaviour: hand the visitor the WhatsApp/Call buttons.
+     This is exactly what Charlie did before the Teams handoff existed, and
+     it stays the behaviour whenever the handoff isn't available. */
+  function escalateFallbackButtons(userText, lead) {
+    botSay((lead || 'A human will serve you better on this one.') + '<br><br>' +
+           bothBtns('Hi Growx Tech IT, I was chatting with Charlie: ' + userText),
+           function () { setChips(DEFAULT_CHIPS); });
+  }
+
+  function escalatePost(userText) {
+    return fetch(ESCALATE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: SESSION_ID, message: userText,
+        history: mem.transcript.slice(-12), page: location.pathname
+      })
+    })
+      .then(function (r) { return r.json(); })
+      .catch(function () { return { ok: false }; });
+  }
+
+  function escalateToHuman(userText) {
+    if (mem.escalating) {
+      /* already waiting on a human for this conversation: just log the
+         extra message as context instead of opening a second Teams card */
+      escalatePost(userText);
+      return;
+    }
+
+    /* Ask the server FIRST and say nothing yet. If Teams isn't wired up
+       (no GROBO_FLOW_URL set) the server says so and the visitor just gets
+       the normal WhatsApp/Call buttons, exactly as before. Only once a
+       human has really been paged do we promise to come back with an answer. */
+    mem.escalating = true;
+    escalatePost(userText).then(function (d) {
+      if (!d || !d.ok) {
+        mem.escalating = false;
+        escalateFallbackButtons(userText);
+        return;
+      }
+      botSay('Let me check that with the team and get right back to you.', function () {
+        pollForHuman(typing(), userText, Date.now());
+      });
+    });
+  }
+
+  function pollForHuman(waitDots, userText, startedAt) {
+    if (Date.now() - startedAt > ESCALATE_TIMEOUT_MS) {
+      waitDots.remove();
+      mem.escalating = false;
+      escalateFallbackButtons(userText, 'Our team hasn\'t picked this up yet, quickest way to reach them right now:');
+      return;
+    }
+
+    setTimeout(function () {
+      fetch(POLL_URL + '?sessionId=' + encodeURIComponent(SESSION_ID))
+        .then(function (r) { return r.json(); })
+        .catch(function () { return { ok: false }; })
+        .then(function (d) {
+          if (d && d.ok && d.status === 'answered' && d.reply) {
+            waitDots.remove();
+            mem.escalating = false;
+            mem.transcript.push({ role: 'assistant', text: d.reply });
+            if (mem.transcript.length > 24) mem.transcript = mem.transcript.slice(-24);
+            botSay(esc(d.reply).replace(/\n/g, '<br>'), function () { setChips(DEFAULT_CHIPS); });
+            return;
+          }
+          if (d && d.ok && (d.status === 'expired' || d.status === 'none')) {
+            waitDots.remove();
+            mem.escalating = false;
+            escalateFallbackButtons(userText, 'Our team hasn\'t picked this up yet, quickest way to reach them right now:');
+            return;
+          }
+          pollForHuman(waitDots, userText, startedAt);
+        });
+    }, POLL_EVERY_MS);
   }
 
   /* ============================================================ reply */
@@ -557,10 +661,14 @@
       if (mem.missStreak === 1) {
         var cl = KBD.CLARIFY[Math.floor(Math.random() * KBD.CLARIFY.length)];
         botSay(cl, function () { setChips(['Find me a job', 'Pricing', 'How it works', 'Talk to a human']); });
-      } else {
+      } else if (mem.missStreak === 2) {
         var fi = Math.min(mem.missStreak - 2, KBD.FALLBACK.length - 1);
         var fb = expand(KBD.FALLBACK[fi], { tail: text });
         botSay(fb.html, function () { setChips(DEFAULT_CHIPS); });
+      } else {
+        /* three misses in a row means Charlie is lost, not the visitor.
+           Hand it to a human in Teams rather than recycling fallback lines. */
+        escalateToHuman(text);
       }
       return;
     }
