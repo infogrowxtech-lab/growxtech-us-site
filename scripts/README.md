@@ -42,6 +42,7 @@ needs to add 3 posts and redeploy without losing anything.
 7. **Regenerate the hub page:** `python3 scripts/gen_hub.py`
 8. **Update sitemap.xml:** `python3 scripts/update_sitemap.py`
 9. **Update llms.txt:** `python3 scripts/update_llms.py`
+   - **Update RSS feed:** `python3 scripts/update_feed.py` (regenerates `feed.xml`; Zapier watches it to auto-share new posts to the LinkedIn company page — never change an existing post's slug, or it gets re-shared)
 10. **Validate everything:** `python3 scripts/validate.py` — must print
     `ALL CHECKS PASSED` before continuing. Fix anything it flags.
 11. **Zip the deploy set** — every file at the repo root and in `assets/`
@@ -70,4 +71,5 @@ needs to add 3 posts and redeploy without losing anything.
 - `gen_hub.py` — rebuilds `blog.html` from the registry.
 - `update_sitemap.py` — idempotently adds missing sitemap entries.
 - `update_llms.py` — regenerates the `## Blog` section of `llms.txt`.
+- `update_feed.py` — regenerates `feed.xml` (RSS 2.0, newest 25 posts) for LinkedIn auto-posting.
 - `validate.py` — the pre-deploy validation suite.
