@@ -314,7 +314,7 @@
 </url>
 <url>
 <loc>https://growxtech-it.us/blog</loc>
-<lastmod>2026-10-19</lastmod>
+<lastmod>2026-10-26</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -1030,5 +1030,24 @@
     <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://growxtech-it.us/blog-dhs-opt-fee-proposal-70000-explained</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-canada-express-entry-lmia-high-wage-tech-jobs</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-it-job-silicon-valley-2026</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
