@@ -27,7 +27,7 @@
         form.reset();
         if (noteEl) { noteEl.hidden = false; noteEl.className = baseClass + ' ok'; noteEl.textContent = successMsg; }
       }).catch(function () {
-        if (noteEl) { noteEl.hidden = false; noteEl.className = baseClass + ' err'; noteEl.textContent = 'Something went wrong — please WhatsApp or email us instead.'; }
+        if (noteEl) { noteEl.hidden = false; noteEl.className = baseClass + ' err'; noteEl.textContent = 'Something went wrong. Please WhatsApp or email us instead.'; }
       }).finally(function () {
         if (btn) { btn.disabled = false; btn.textContent = prevText; }
       });
@@ -38,13 +38,13 @@
     bind(
       document.getElementById('consultForm'),
       document.getElementById('cfNote'),
-      "Thanks — we've got your details. A career advisor will reach out soon, usually within one business day.",
+      "Thanks, we've got your details. A career advisor will reach out soon, usually within one business day.",
       'cf-note'
     );
     bind(
       document.getElementById('newsForm'),
       document.getElementById('newsNote'),
-      'Subscribed — welcome aboard.',
+      'Subscribed, welcome aboard.',
       'foot-news-note'
     );
   });
