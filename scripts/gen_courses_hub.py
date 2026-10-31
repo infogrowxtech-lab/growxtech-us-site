@@ -5,7 +5,7 @@ scripts/courses_registry.json, mirroring gen_hub.py's approach for /blog.
 
 Registry order = display order within each category. To add new courses,
 append entries to courses_registry.json (grouped under the right
-"category") and re-run this script — it rebuilds the hero chip counts,
+"category") and re-run this script, it rebuilds the hero chip counts,
 the BreadcrumbList/ItemList JSON-LD, and the card grid from scratch.
 Run from the repo root: python3 scripts/gen_courses_hub.py
 """
@@ -242,7 +242,7 @@ PAGE = f'''<!doctype html>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
+        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/resume-linkedin-score">Resume &amp; LinkedIn Score</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
       </div>
       <div>
         <h4>Reach us</h4>

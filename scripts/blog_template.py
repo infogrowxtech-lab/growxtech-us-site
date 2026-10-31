@@ -73,7 +73,6 @@ PAGE = '''<!doctype html>
     </ul>
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:+17198389991" aria-label="Call +1 (719) 838-9991"><span class="ci">&#128222;</span><span class="ct">Call</span></a>
-      <a class="btn btn-wa" href="https://wa.me/13026831622?text=Hi%20Growx%20Tech%20IT%2C%20I%27d%20like%20a%20free%20career%20consultation." target="_blank" rel="noopener" aria-label="WhatsApp us"><span class="ci">&#128172;</span><span class="ct">WhatsApp</span></a>
       <button class="btn btn-grobo" data-grobo=""><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Ask Charlie</button>
     </div>
   </div>
@@ -143,7 +142,7 @@ PAGE = '''<!doctype html>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
+        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/resume-linkedin-score">Resume &amp; LinkedIn Score</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
       </div>
       <div>
         <h4>Reach us</h4>

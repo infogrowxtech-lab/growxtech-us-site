@@ -99,7 +99,6 @@ PAGE = f'''<!doctype html>
     </ul>
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:+17198389991" aria-label="Call +1 (719) 838-9991"><span class="ci">&#128222;</span><span class="ct">Call</span></a>
-      <a class="btn btn-wa" href="https://wa.me/13026831622?text=Hi%20Growx%20Tech%20IT%2C%20I%27d%20like%20a%20free%20career%20consultation." target="_blank" rel="noopener" aria-label="WhatsApp us"><span class="ci">&#128172;</span><span class="ct">WhatsApp</span></a>
       <button class="btn btn-grobo" data-grobo=""><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Ask Charlie</button>
     </div>
   </div>
@@ -111,7 +110,7 @@ PAGE = f'''<!doctype html>
     <p class="crumb"><a href="/">Home</a> · Blog</p>
     <span class="label">Research-backed · No fluff · New posts weekly</span>
     <h1>The Growx Blog. <span class="grad">Straight answers on the US job market.</span></h1>
-    <p>Data and research on hiring, resumes, ATS systems and the US job search &#8212; written for people actually looking for work, not for search engines. Every claim is sourced.</p>
+    <p>Data and research on hiring, resumes, ATS systems and the US job search, written for people actually looking for work, not for search engines. Every claim is sourced.</p>
   </div>
 </header>
 
@@ -128,7 +127,7 @@ PAGE = f'''<!doctype html>
     <div class="ctaband sr">
       <div>
         <h2>Want this done for you, not just explained? <span class="grad">We'll handle it.</span></h2>
-        <p>Growx handles the resume, the LinkedIn profile, the applications and the interview prep &#8212; the same fixes covered on this blog, applied to your profile by people who do it every day.</p>
+        <p>Growx handles the resume, the LinkedIn profile, the applications and the interview prep, the same fixes covered on this blog, applied to your profile by people who do it every day.</p>
       </div>
       <div class="actions">
         <a class="btn btn-grobo btn-lg" href="/services">See how it works</a>
@@ -150,12 +149,13 @@ PAGE = f'''<!doctype html>
         <h4>Offices</h4>
         <ul class="offices">
           <li><span class="flag"><img src="/assets/flag-us.svg" alt="USA" class="flagimg"></span><span><b>USA</b><br>Growx Tech IT LLC<br>30 N Gould St, Sheridan, Wyoming 82801</span></li>
+          <li><span class="flag"><img src="/assets/flag-au.svg" alt="Australia" class="flagimg"></span><span><b>Australia</b><br>Growx Tech IT LLC<br>Level 36, Gateway, 1 Macquarie Place, Sydney, 2000</span></li>
           <li><span class="flag"><img src="/assets/flag-in.svg" alt="India" class="flagimg"></span><span><b>India</b><br>Growx Tech IT LLC<br>C-706, Siddhi Vinayak Towers, Sarkhej &#8211; Gandhinagar Hwy, Makarba, Ahmedabad, Gujarat 380051</span></li>
         </ul>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
+        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/resume-linkedin-score">Resume &amp; LinkedIn Score</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
       </div>
       <div>
         <h4>Reach us</h4>

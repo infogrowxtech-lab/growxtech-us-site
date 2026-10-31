@@ -39,7 +39,7 @@ post1 = {
     "h1": "How to Choose an IT Job Placement Service If You're on OPT or H-1B",
     "lede": "Search “IT job placement for OPT” and you'll get dozens of nearly identical landing pages. Here's what actually separates them, based on how these businesses are structured, not how their homepage reads.",
     "cta_h2": "Want the version where you can see who you're paying?",
-    "cta_p": "Real U.S. office addresses, E-Verify participation, and a resume/LinkedIn/interview process you can see before you commit — that's the whole pitch.",
+    "cta_p": "Real U.S. office addresses, E-Verify participation, and a resume/LinkedIn/interview process you can see before you commit. That's the whole pitch.",
     "cta_href": CTA_HREF,
     "cta_label": CTA_LABEL,
     "body": """      <p>If you're on OPT, you've almost certainly been pitched by more than one company promising to get you placed. The number of people in that search grew fast: 194,554 F-1 students held OPT employment authorization in 2024, up 21.1% from the year before, and 165,524 of them were on the STEM OPT extension specifically, built for exactly the technical fields most of these agencies target. Nearly half of all STEM OPT participants come from India, another fifth from China.</p>
@@ -60,12 +60,12 @@ post1 = {
         <li>Will I be a W-2 employee of an actual employer, or a 1099/C2C contractor passed between vendors?</li>
         <li>Who is the employer of record, and can I see their actual office address?</li>
         <li>Is the company enrolled in E-Verify? (Relevant directly to STEM OPT, where your training-plan employer is required to be.)</li>
-        <li>What exactly am I paying for — training, resume marketing, active recruiting, or a mix — and what happens if I don't get placed?</li>
+        <li>What exactly am I paying for (training, resume marketing, active recruiting, or a mix), and what happens if I don't get placed?</li>
         <li>Can I see a real, current job description and the employer's name before my resume is submitted?</li>
       </ul>
 
       <h2>Why this is under more scrutiny than it used to be</h2>
-      <p>This isn't just due diligence for its own sake. DHS's Student and Exchange Visitor Program has said it is actively investigating fraud tied to STEM OPT employment, and it specifically named IT recruitment firms, consulting companies, and staffing agencies as the business types most often involved — not because every company in those categories is problematic, but because that's where the pattern has shown up. We've written a separate, more detailed breakdown of exactly what DHS flagged and what you legally cannot be charged for.</p>
+      <p>This isn't just due diligence for its own sake. DHS's Student and Exchange Visitor Program has said it is actively investigating fraud tied to STEM OPT employment, and it specifically named IT recruitment firms, consulting companies, and staffing agencies as the business types most often involved, not because every company in those categories is problematic, but because that's where the pattern has shown up. We've written a separate, more detailed breakdown of exactly what DHS flagged and what you legally cannot be charged for.</p>
 
       <h2>The bottom line</h2>
       <p>A legitimate placement service should be able to answer every question above in plain language, in writing, before you sign anything. If a company is vague about who employs you, what model it runs, or where its office actually is, that vagueness is the answer. Our own <a href="/services">process</a> is built to survive exactly this kind of question: real W-2 placement, named offices in Sheridan, Wyoming, Sydney, and Ahmedabad, and a resume-to-offer process you can see before you pay for it.</p>
@@ -90,7 +90,7 @@ post2 = {
     "date_iso": DATE_ISO,
     "date_display": DATE_DISPLAY,
     "read_time": "6 min",
-    "meta_desc": "The sponsorship question is legal, common, and often automated — and most OPT candidates answer it in a way that filters themselves out before a human ever sees the resume. Here's what the guidance actually allows, and a more accurate way to answer.",
+    "meta_desc": "The sponsorship question is legal, common, and often automated, and most OPT candidates answer it in a way that filters themselves out before a human ever sees the resume. Here's what the guidance actually allows, and a more accurate way to answer.",
     "og_desc": "Most OPT candidates answer the sponsorship question in a way that filters themselves out automatically. Here's a more accurate way to answer it.",
     "h1": "The “Will You Need Sponsorship?” Question: How to Answer It Without Hurting Your Application",
     "lede": "It shows up on page one of almost every online application, often before your resume has been looked at by a person. Here's what the question is actually allowed to ask, and why the honest answer is usually more favorable than candidates assume.",
@@ -107,24 +107,24 @@ post2 = {
       <p>We've written separately about how <a href="/blog-ats-resume-screening">ATS platforms mostly index resumes rather than reject them outright</a>. The sponsorship question is different: it's often a hard-coded screening field tied to a yes/no answer a recruiter configured in advance, which means it <em>can</em> auto-filter before a resume is ever opened, in a way general resume content usually doesn't.</p>
 
       <h2>Where OPT candidates answer this incorrectly</h2>
-      <p>OPT itself is independent work authorization: an EAD card that lets you work for any employer without that employer filing anything, for up to 12 months, or up to 36 months total if you qualify for the STEM OPT extension. Sponsorship — most often an H-1B filing — is a separate, later question about long-term status, not a requirement for your first year or more of employment. If an employer is only asking about <em>current</em> authorization, "do I need sponsorship right now" and "will I ever need sponsorship" have different honest answers, and the form rarely distinguishes between them.</p>
+      <p>OPT itself is independent work authorization: an EAD card that lets you work for any employer without that employer filing anything, for up to 12 months, or up to 36 months total if you qualify for the STEM OPT extension. Sponsorship, most often an H-1B filing, is a separate, later question about long-term status, not a requirement for your first year or more of employment. If an employer is only asking about <em>current</em> authorization, "do I need sponsorship right now" and "will I ever need sponsorship" have different honest answers, and the form rarely distinguishes between them.</p>
 
       <h2>A more accurate way to handle it</h2>
       <ul>
         <li><strong>Read the question literally.</strong> "Now or in the future" is broad by design, but if there's a free-text field, a one-line clarification ("Currently authorized to work full-time under OPT through [date]; would require H-1B sponsorship for continued employment after that") is more accurate than a flat yes or no.</li>
-        <li><strong>Put your authorization status on the resume itself</strong>, not just the application form — a short line near your contact details ("Authorized to work in the U.S. under F-1 OPT / STEM OPT through [date]") answers the question before it's asked and reads as organized, not evasive.</li>
+        <li><strong>Put your authorization status on the resume itself</strong>, not just the application form. A short line near your contact details ("Authorized to work in the U.S. under F-1 OPT / STEM OPT through [date]") answers the question before it's asked and reads as organized, not evasive.</li>
         <li><strong>Don't guess at future sponsorship needs.</strong> If you haven't decided whether you'll pursue H-1B sponsorship, say your current status and authorization window rather than committing to an answer about a decision that isn't made yet.</li>
       </ul>
 
       <h2>The bottom line</h2>
-      <p>The sponsorship question isn't a trap, and it isn't illegal for an employer to ask — but it rewards precision. Candidates who answer in terms of their actual authorization window, rather than a reflexive yes or no, get through more of these automated first filters than the question's reputation suggests.</p>
+      <p>The sponsorship question isn't a trap, and it isn't illegal for an employer to ask, but it rewards precision. Candidates who answer in terms of their actual authorization window, rather than a reflexive yes or no, get through more of these automated first filters than the question's reputation suggests.</p>
 """,
     "sources": [
         ("Marks Gray: Immigration-Related Questions Employers Can Ask During the Hiring Process", "https://marksgray.com/immigration-blog/immigration-related-questions-can-employers-ask-hiring-process/"),
         ("USCIS: Optional Practical Training Extension for STEM Students (STEM OPT)", "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt"),
         ("Jobscan: 5 Critical ATS Formatting Mistakes", "https://www.jobscan.co/blog/ats-formatting-mistakes/"),
     ],
-    "excerpt": "The sponsorship question is legal, common, and often automated — and most OPT candidates answer it in a way that filters themselves out before a human ever sees the resume. Here's a more accurate way to answer it.",
+    "excerpt": "The sponsorship question is legal, common, and often automated, and most OPT candidates answer it in a way that filters themselves out before a human ever sees the resume. Here's a more accurate way to answer it.",
 }
 posts.append(post2)
 
@@ -142,12 +142,12 @@ post3 = {
     "meta_desc": "DHS names IT recruitment firms, consulting companies, and staffing agencies as the three business types most tied to STEM OPT fraud. The exact red flags it lists, and what you legally cannot be charged for, in plain facts.",
     "og_desc": "DHS names IT recruitment firms, consulting companies, and staffing agencies as the business types most tied to STEM OPT fraud. Here's exactly what it's warning about.",
     "h1": "OPT and H-1B Placement Agency Red Flags: What DHS Is Warning About in 2026",
-    "lede": "The Department of Homeland Security has named the exact category of business this applies to — IT recruitment, consulting, and staffing firms. Here's what it actually said, and what the law says you can't be charged for, regardless of who you work with.",
+    "lede": "The Department of Homeland Security has named the exact category of business this applies to: IT recruitment, consulting, and staffing firms. Here's what it actually said, and what the law says you can't be charged for, regardless of who you work with.",
     "cta_h2": "Want to check our own answers against this list?",
-    "cta_p": "Named U.S., Australian, and Indian offices, W-2 placement, and E-Verify participation — ask us anything on this checklist before you decide.",
+    "cta_p": "Named U.S., Australian, and Indian offices, W-2 placement, and E-Verify participation. Ask us anything on this checklist before you decide.",
     "cta_href": "/contact",
     "cta_label": "Ask us directly",
-    "body": """      <p>DHS's Student and Exchange Visitor Program (SEVP) said this year it is actively working with Homeland Security Investigations to identify and investigate fraud tied to STEM OPT employment. It didn't describe this as a general warning about bad actors somewhere out there. It named three specific business types as the pattern it keeps finding: IT recruitment firms, consulting companies, and staffing agencies — categories that have drawn scrutiny since the STEM OPT rule was finalized in 2016.</p>
+    "body": """      <p>DHS's Student and Exchange Visitor Program (SEVP) said this year it is actively working with Homeland Security Investigations to identify and investigate fraud tied to STEM OPT employment. It didn't describe this as a general warning about bad actors somewhere out there. It named three specific business types as the pattern it keeps finding: IT recruitment firms, consulting companies, and staffing agencies, categories that have drawn scrutiny since the STEM OPT rule was finalized in 2016.</p>
 
       <p>Naming the category isn't the same as accusing every company in it. But if you're evaluating any agency in this space, including ours, these are the specific things worth checking.</p>
 
@@ -160,20 +160,20 @@ post3 = {
 
       <h2>A short checklist before you sign anything</h2>
       <ul>
-        <li>Does the company have a real, staffed, checkable U.S. office address — not a mailbox or a residential address?</li>
+        <li>Does the company have a real, staffed, checkable U.S. office address, not a mailbox or a residential address?</li>
         <li>Will your actual day-to-day work match what's written on your I-983 training plan, if you're on STEM OPT?</li>
         <li>Is communication through a working phone number and company email, not only WhatsApp or WeChat?</li>
-        <li>Is the company asking you to pay any H-1B filing-related fee directly? (If yes, that's not a judgment call — it's against the rule above.)</li>
+        <li>Is the company asking you to pay any H-1B filing-related fee directly? (If yes, that's not a judgment call. It's against the rule above.)</li>
         <li>Can you verify E-Verify enrollment, which STEM OPT training-plan employers are required to maintain?</li>
       </ul>
-      <p>We covered the broader question of telling different placement business models apart in a <a href="/blog-choosing-it-job-placement-agency-opt-h1b">separate, more general guide</a> — this one is specifically about the fraud pattern DHS has called out by name.</p>
+      <p>We covered the broader question of telling different placement business models apart in a <a href="/blog-choosing-it-job-placement-agency-opt-h1b">separate, more general guide</a>. This one is specifically about the fraud pattern DHS has called out by name.</p>
 
       <h2>The bottom line</h2>
-      <p>None of this is a reason to be afraid of placement services generally — it's a reason to ask specific, checkable questions instead of trusting a homepage. A company with nothing to hide will answer every item on this list directly, usually within one phone call.</p>
+      <p>None of this is a reason to be afraid of placement services generally. It's a reason to ask specific, checkable questions instead of trusting a homepage. A company with nothing to hide will answer every item on this list directly, usually within one phone call.</p>
 """,
     "sources": [
         ("VisaServe: DHS Issues Warning on STEM OPT Employer Fraud", "https://visaserve.com/dhs-issues-warning-on-stem-opt-employer-fraud-what-international-students-and-employers-need-to-know/"),
-        ("U.S. Department of Labor: Fact Sheet #62H — H-1B Pay Deductions", "https://www.dol.gov/agencies/whd/fact-sheets/62h-h1b-pay-deductions"),
+        ("U.S. Department of Labor: Fact Sheet #62H - H-1B Pay Deductions", "https://www.dol.gov/agencies/whd/fact-sheets/62h-h1b-pay-deductions"),
         ("ICE: Completing the Form I-983 Training Plan for STEM OPT Students", "https://www.ice.gov/doclib/sevis/pdf/i983Instructions.pdf"),
     ],
     "excerpt": "DHS names IT recruitment firms, consulting companies, and staffing agencies as the three business types most tied to STEM OPT fraud. The exact red flags it lists, and what you legally cannot be charged for, in plain facts.",

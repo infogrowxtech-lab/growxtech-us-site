@@ -4,7 +4,7 @@ Reusable free-course page template for growxtech-it.us, mirroring the
 pattern in blog_template.py. Import PAGE and call render_course(course)
 to get the full HTML for one course-*.html page.
 
-`course` is a dict — see scripts/courses_registry.json for real examples
+`course` is a dict, see scripts/courses_registry.json for real examples
 of every key. All of these must be plain strings/lists (no nested dicts):
   slug            e.g. "course-javascript-basics" (no leading slash)
   course_id       e.g. "javascript-basics" (used by GX.Courses.init + cert storage)
@@ -206,7 +206,7 @@ PAGE = '''<!doctype html>
       </div>
       <div>
         <h4>Explore</h4>
-        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
+        <ul><li><a href="/services">Services</a></li><li><a href="/jobs">Jobs</a></li><li><a href="/courses">Free Courses</a></li><li><a href="/locations">Locations</a></li><li><a href="/blog">Blog</a></li><li><a href="/resume-linkedin-score">Resume &amp; LinkedIn Score</a></li><li><a href="/referral">Referral</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
       </div>
       <div>
         <h4>Reach us</h4>
