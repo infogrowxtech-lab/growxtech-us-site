@@ -5,7 +5,7 @@ scripts/courses_registry.json, mirroring gen_hub.py's approach for /blog.
 
 Registry order = display order within each category. To add new courses,
 append entries to courses_registry.json (grouped under the right
-"category") and re-run this script — it rebuilds the hero chip counts,
+"category") and re-run this script, it rebuilds the hero chip counts,
 the BreadcrumbList/ItemList JSON-LD, and the card grid from scratch.
 Run from the repo root: python3 scripts/gen_courses_hub.py
 """

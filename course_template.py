@@ -4,7 +4,7 @@ Reusable free-course page template for growxtech-it.us, mirroring the
 pattern in blog_template.py. Import PAGE and call render_course(course)
 to get the full HTML for one course-*.html page.
 
-`course` is a dict — see scripts/courses_registry.json for real examples
+`course` is a dict, see scripts/courses_registry.json for real examples
 of every key. All of these must be plain strings/lists (no nested dicts):
   slug            e.g. "course-javascript-basics" (no leading slash)
   course_id       e.g. "javascript-basics" (used by GX.Courses.init + cert storage)

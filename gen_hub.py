@@ -99,7 +99,6 @@ PAGE = f'''<!doctype html>
     </ul>
     <div class="nav-cta">
       <a class="btn btn-call" href="tel:+17198389991" aria-label="Call +1 (719) 838-9991"><span class="ci">&#128222;</span><span class="ct">Call</span></a>
-      <a class="btn btn-wa" href="https://wa.me/13026831622?text=Hi%20Growx%20Tech%20IT%2C%20I%27d%20like%20a%20free%20career%20consultation." target="_blank" rel="noopener" aria-label="WhatsApp us"><span class="ci">&#128172;</span><span class="ct">WhatsApp</span></a>
       <button class="btn btn-grobo" data-grobo=""><img src="/assets/grobo-avatar.webp" alt="" class="gbtn-face">Ask Charlie</button>
     </div>
   </div>
@@ -111,7 +110,7 @@ PAGE = f'''<!doctype html>
     <p class="crumb"><a href="/">Home</a> · Blog</p>
     <span class="label">Research-backed · No fluff · New posts weekly</span>
     <h1>The Growx Blog. <span class="grad">Straight answers on the US job market.</span></h1>
-    <p>Data and research on hiring, resumes, ATS systems and the US job search &#8212; written for people actually looking for work, not for search engines. Every claim is sourced.</p>
+    <p>Data and research on hiring, resumes, ATS systems and the US job search, written for people actually looking for work, not for search engines. Every claim is sourced.</p>
   </div>
 </header>
 
@@ -128,7 +127,7 @@ PAGE = f'''<!doctype html>
     <div class="ctaband sr">
       <div>
         <h2>Want this done for you, not just explained? <span class="grad">We'll handle it.</span></h2>
-        <p>Growx handles the resume, the LinkedIn profile, the applications and the interview prep &#8212; the same fixes covered on this blog, applied to your profile by people who do it every day.</p>
+        <p>Growx handles the resume, the LinkedIn profile, the applications and the interview prep, the same fixes covered on this blog, applied to your profile by people who do it every day.</p>
       </div>
       <div class="actions">
         <a class="btn btn-grobo btn-lg" href="/services">See how it works</a>

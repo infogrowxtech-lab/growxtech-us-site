@@ -121,16 +121,16 @@
     var hasLinkedin = /linkedin\.com\/in\//i.test(text);
     var contactScore = (hasEmail ? 4 : 0) + (hasPhone ? 3 : 0) + (hasLinkedin ? 3 : 0);
     var contactNotes = [];
-    contactNotes.push({ ok: hasEmail, text: hasEmail ? 'Email address found' : 'No email address found — recruiters need a direct way to reach you' });
+    contactNotes.push({ ok: hasEmail, text: hasEmail ? 'Email address found' : 'No email address found. Recruiters need a direct way to reach you' });
     contactNotes.push({ ok: hasPhone, text: hasPhone ? 'Phone number found' : 'No phone number detected' });
-    contactNotes.push({ ok: hasLinkedin, text: hasLinkedin ? 'LinkedIn profile link found' : 'No LinkedIn profile link found — add one near your contact info' });
+    contactNotes.push({ ok: hasLinkedin, text: hasLinkedin ? 'LinkedIn profile link found' : 'No LinkedIn profile link found. Add one near your contact info' });
     sections.push(sectionResult('Contact & Links', contactScore, 10, contactNotes));
 
     // 2. Length (10)
     var lengthScore, lengthNote;
-    if (wordCount >= 350 && wordCount <= 800) { lengthScore = 10; lengthNote = { ok: true, text: wordCount + ' words — a solid, scannable length' }; }
-    else if (wordCount >= 250 && wordCount < 350 || wordCount > 800 && wordCount <= 1000) { lengthScore = 7; lengthNote = { ok: false, text: wordCount + ' words — a bit ' + (wordCount < 350 ? 'short' : 'long') + ' for most recruiter skim-reading' }; }
-    else { lengthScore = 4; lengthNote = { ok: false, text: wordCount + ' words — ' + (wordCount < 250 ? 'likely too thin to show real impact' : 'likely too long; aim for 1-2 pages') }; }
+    if (wordCount >= 350 && wordCount <= 800) { lengthScore = 10; lengthNote = { ok: true, text: wordCount + ' words, a solid, scannable length' }; }
+    else if (wordCount >= 250 && wordCount < 350 || wordCount > 800 && wordCount <= 1000) { lengthScore = 7; lengthNote = { ok: false, text: wordCount + ' words, a bit ' + (wordCount < 350 ? 'short' : 'long') + ' for most recruiter skim-reading' }; }
+    else { lengthScore = 4; lengthNote = { ok: false, text: wordCount + ' words. ' + (wordCount < 250 ? 'Likely too thin to show real impact' : 'Likely too long; aim for 1-2 pages') }; }
     sections.push(sectionResult('Length', lengthScore, 10, [lengthNote]));
 
     // bullet-like lines, shared by action verbs + quantification
@@ -153,7 +153,7 @@
     sections.push(sectionResult('Quantified Achievements', numScore, 20, [
       bulletLines.length
         ? { ok: numRatio >= 0.4, text: numberHits.length + ' of ' + bulletLines.length + ' lines include a number, %, or $ amount' }
-        : { ok: false, text: 'No measurable results detected — numbers make impact concrete' }
+        : { ok: false, text: 'No measurable results detected. Numbers make impact concrete' }
     ]));
 
     // 5. Skills coverage (15)
@@ -182,8 +182,8 @@
     var atsScore = clean ? 10 : 3;
     sections.push(sectionResult('ATS Extractability', atsScore, 10, [
       clean
-        ? { ok: true, text: 'Text extracted as clean, continuous lines — a good sign a real ATS can parse it too' }
-        : { ok: false, text: 'Many lines extracted as just 1-2 words — likely columns, tables, or text boxes in your layout, which often confuse real ATS parsers too' }
+        ? { ok: true, text: 'Text extracted as clean, continuous lines, a good sign a real ATS can parse it too' }
+        : { ok: false, text: 'Many lines extracted as just 1-2 words. Likely columns, tables, or text boxes in your layout, which often confuse real ATS parsers too' }
     ]));
 
     return { sections: sections, meta: { wordCount: wordCount } };
@@ -226,7 +226,7 @@
     sections.push(sectionResult('Headline', headlineScore, 15, [
       { ok: headlineWords >= 6, text: headline ? ('Headline: "' + headline + '"') : 'No headline text detected right under your name' },
       { ok: headlineTechHits.length > 0, text: headlineTechHits.length ? 'Includes a recognizable role/skill keyword' : 'Consider adding a specific role or skill, not just a job title' },
-      genericHeadline ? { ok: false, text: 'Reads as generic ("Student at...", "Looking for...") — lead with what you actually do' } : null
+      genericHeadline ? { ok: false, text: 'Reads as generic ("Student at...", "Looking for...") - lead with what you actually do' } : null
     ].filter(Boolean)));
 
     // About
@@ -237,8 +237,8 @@
     var aboutScore = aboutWords === 0 ? 0 : (aboutWords >= 100 ? 12 : 6) + Math.min(8, aboutTechHits.length);
     sections.push(sectionResult('About', aboutScore, 20, [
       aboutWords === 0
-        ? { ok: false, text: 'No "About" section found — this is one of the most-read parts of a profile' }
-        : { ok: aboutWords >= 100, text: aboutWords + ' words in your About section' + (aboutWords < 100 ? ' — aim for 100+ to tell a real story' : '') },
+        ? { ok: false, text: 'No "About" section found. This is one of the most-read parts of a profile' }
+        : { ok: aboutWords >= 100, text: aboutWords + ' words in your About section' + (aboutWords < 100 ? ', aim for 100+ to tell a real story' : '') },
       aboutWords ? { ok: aboutTechHits.length >= 5, text: aboutTechHits.length + ' recognizable skill keyword' + (aboutTechHits.length === 1 ? '' : 's') + ' mentioned in About' } : null
     ].filter(Boolean)));
 
@@ -296,7 +296,7 @@
   }
 
   function verdictFor(score) {
-    if (score >= 85) return { h: 'Strong — just polish from here', s: 'Your file hits most of the marks recruiters and ATS systems look for. The notes below are refinements, not fixes.' };
+    if (score >= 85) return { h: 'Strong, just polish from here', s: 'Your file hits most of the marks recruiters and ATS systems look for. The notes below are refinements, not fixes.' };
     if (score >= 65) return { h: 'Good bones, but a few real gaps', s: 'You\'re most of the way there. Closing the gaps below should meaningfully improve response rates.' };
     if (score >= 40) return { h: 'Several gaps are likely costing you interviews', s: 'This is fixable, but in its current state it\'s probably losing you chances before a human even reads it.' };
     return { h: 'This needs a real rebuild', s: 'Multiple core pieces recruiters and ATS systems expect are missing or hard to detect. Worth rebuilding rather than patching.' };
@@ -360,7 +360,7 @@
       return;
     }
     if (file.size > 15 * 1024 * 1024) {
-      showStatus('That file is larger than 15MB — please upload a standard resume/LinkedIn PDF export.', true);
+      showStatus('That file is larger than 15MB. Please upload a standard resume/LinkedIn PDF export.', true);
       return;
     }
     if (!window.pdfjsLib) {
@@ -439,7 +439,7 @@
       }
       followupForm.hidden = true;
       followupNote.hidden = false;
-      followupNote.textContent = 'Got it — a real recruiter will take a look and follow up.';
+      followupNote.textContent = 'Got it. A real recruiter will take a look and follow up.';
     });
   }
 
