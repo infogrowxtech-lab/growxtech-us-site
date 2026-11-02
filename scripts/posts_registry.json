@@ -1,5 +1,113 @@
 [
   {
+    "slug": "blog-canada-express-entry-lmia-high-wage-tech-jobs",
+    "title": "Canada Drops the LMIA Requirement for High-Wage Tech Job Offers: What It Means for Your Toronto or Vancouver Job Search",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-10-26",
+    "date_display": "October 26, 2026",
+    "read_time": "7 min",
+    "excerpt": "Starting November 3, 2026, high-wage job offers — including software engineer and developer roles — earn Express Entry bonus points without an LMIA. What changed, and what it means for tech job seekers in Toronto and Vancouver."
+  },
+  {
+    "slug": "blog-dhs-opt-fee-proposal-70000-explained",
+    "title": "DHS Proposes a $70,000 OPT Fee: What It Means If You're Job Searching on F-1 Status",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-10-26",
+    "date_display": "October 26, 2026",
+    "read_time": "7 min",
+    "excerpt": "DHS's October 8, 2026 proposal would charge schools $70,000 for a student's first OPT period and $30,000 for each one after, including STEM OPT. What's proposed, what's unchanged, and what it means for your job search."
+  },
+  {
+    "slug": "blog-it-job-silicon-valley-2026",
+    "title": "How to Get an IT Job in Silicon Valley in 2026",
+    "category": "Job Market",
+    "date_iso": "2026-10-26",
+    "date_display": "October 26, 2026",
+    "read_time": "7 min",
+    "excerpt": "Indeed's October 2026 data shows software development postings at their weakest point nationally, with San Francisco among the softest metros, while data center hiring surges. How to target where Silicon Valley hiring actually is."
+  },
+  {
+    "slug": "blog-ai-resume-skills-visibility-honesty-2026",
+    "title": "You Put AI Skills on Your Resume. Is Anyone Actually Seeing Them?",
+    "category": "Resume & ATS",
+    "date_iso": "2026-10-19",
+    "date_display": "October 19, 2026",
+    "read_time": "7 min",
+    "excerpt": "New ZipRecruiter data finds 43% of job seekers list AI skills on their resume, but only 10% place them prominently. A separate study ties AI-written resumes to a sharp rise in resume inaccuracies. What the two findings mean together."
+  },
+  {
+    "slug": "blog-enterprise-ai-cybersecurity-skills-investment-2026",
+    "title": "Companies Are Shifting AI Budgets Toward Cybersecurity and Training: What It Means for Your Next Certification",
+    "category": "Certifications",
+    "date_iso": "2026-10-19",
+    "date_display": "October 19, 2026",
+    "read_time": "7 min",
+    "excerpt": "New CompTIA research finds nearly half of companies are putting new AI budget into cybersecurity and employee AI training, tied for the top spending priority. What that means for which certification to study next."
+  },
+  {
+    "slug": "blog-it-job-new-york-city-recent-graduate-2026",
+    "title": "How to Get an IT Job in New York City as a Recent Grad in 2026",
+    "category": "Career Change",
+    "date_iso": "2026-10-19",
+    "date_display": "October 19, 2026",
+    "read_time": "7 min",
+    "excerpt": "NYC entry-level tech postings are down 50% since 2022 even as CUNY computer science enrollment grew 146%. What the data shows, and how recent grads can actually stand out in New York's tech market in 2026."
+  },
+  {
+    "slug": "blog-h1b-fee-second-court-block-october-2026",
+    "title": "The H-1B $100,000 Fee Is Blocked by a Second Federal Court: What Changed in October 2026",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-10-12",
+    "date_display": "October 12, 2026",
+    "read_time": "7 min",
+    "excerpt": "A second federal judge blocked the $100,000 H-1B fee on September 30, 2026. What the ruling actually says, how it differs from June's ruling, and what's currently enforceable, in plain facts."
+  },
+  {
+    "slug": "blog-it-job-boston-massachusetts-2026",
+    "title": "How to Get an IT Job in Boston in 2026",
+    "category": "Job Market",
+    "date_iso": "2026-10-12",
+    "date_display": "October 12, 2026",
+    "read_time": "7 min",
+    "excerpt": "Boston just climbed to No. 7 in CBRE's 2026 tech talent rankings even as Cambridge-based HubSpot cut 660 jobs. What the real data shows, and how to position yourself in Boston's research-driven IT market."
+  },
+  {
+    "slug": "blog-workday-ai-skills-resume-shift-october-2026",
+    "title": "Why Demand for “Basic” AI Skills on Your Resume Just Fell 25%",
+    "category": "Resume & ATS",
+    "date_iso": "2026-10-12",
+    "date_display": "October 12, 2026",
+    "read_time": "7 min",
+    "excerpt": "Workday's October 2026 report found employer demand for basic AI skills fell 25% since January, while demand for hands-on, build-level AI skills rose 51%. What the real data means for your resume."
+  },
+  {
+    "slug": "blog-it-job-atlanta-georgia-2026",
+    "title": "How to Get an IT Job in Atlanta, Georgia in 2026",
+    "category": "Job Market",
+    "date_iso": "2026-10-05",
+    "date_display": "October 5, 2026",
+    "read_time": "5 min",
+    "excerpt": "Atlanta tech employment was flat year over year through July 2026, but AI-adjacent hiring is up 45%+ and tech job concentration beats the national average. What the data shows, and how to position yourself."
+  },
+  {
+    "slug": "blog-september-2026-jobs-report-tech-job-seekers",
+    "title": "The September 2026 Jobs Report, Explained: What a “Stuck” Market Means If You're Job Hunting",
+    "category": "Job Market",
+    "date_iso": "2026-10-05",
+    "date_display": "October 5, 2026",
+    "read_time": "6 min",
+    "excerpt": "BLS's September 2026 jobs report shows a market that's stuck, not shrinking: +29,000 payrolls, layoffs down 20% YoY, but hiring intentions at a 15-year September low. What it means for your search."
+  },
+  {
+    "slug": "blog-vance-h1b-eliminate-2026-explained",
+    "title": "JD Vance Says He'd Support Eliminating H-1B: What Was Actually Said, and What Hasn't Changed",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-10-05",
+    "date_display": "October 5, 2026",
+    "read_time": "6 min",
+    "excerpt": "VP JD Vance said October 2 he'd support eliminating the H-1B program, calling it “completely broken.” What he actually said, why it isn't a policy change, and what's actually enforceable on H-1B right now."
+  },
+  {
     "slug": "blog-opt-placement-agency-red-flags-dhs-warning-2026",
     "title": "OPT and H-1B Placement Agency Red Flags: What DHS Is Warning About in 2026",
     "category": "Visa & Work Authorization",
@@ -70,6 +178,42 @@
     "date_display": "September 24, 2026",
     "read_time": "5 min",
     "excerpt": "Who qualifies for Canada's PGWP, how permit length is tied to your program, the 180-day application window, and the field-of-study rule that started November 2024."
+  },
+  {
+    "slug": "blog-day1-cpt-vs-opt",
+    "title": "Day-1 CPT vs OPT: What's Actually Different, and the Real Risk",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-09-24",
+    "date_display": "September 24, 2026",
+    "read_time": "6 min",
+    "excerpt": "Day-1 CPT lets you work from the start of your program, but full-time CPT for a year quietly kills your OPT eligibility. What CPT and OPT actually require, and where Day-1 CPT programs get risky."
+  },
+  {
+    "slug": "blog-opt-90-day-unemployment-rule-explained",
+    "title": "OPT Unemployment Days Explained: The 90-Day and 150-Day Rule",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-09-24",
+    "date_display": "September 24, 2026",
+    "read_time": "6 min",
+    "excerpt": "How many unemployment days you're allowed on F-1 OPT and STEM OPT, when the clock starts, what counts against it, and what to do if you're close to the limit."
+  },
+  {
+    "slug": "blog-opt-running-out-of-days",
+    "title": "Running Out of OPT Days? Your Real Options, Explained",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-09-24",
+    "date_display": "September 24, 2026",
+    "read_time": "5 min",
+    "excerpt": "If you're close to your 90 or 150-day OPT unemployment limit, here are your actual options: continuing education, changing status, or departing, and why there's no grace period once you cross it."
+  },
+  {
+    "slug": "blog-stem-opt-extension-cap-gap-explained",
+    "title": "STEM OPT Extension and the H-1B Cap-Gap, Explained",
+    "category": "Visa & Work Authorization",
+    "date_iso": "2026-09-24",
+    "date_display": "September 24, 2026",
+    "read_time": "6 min",
+    "excerpt": "Who qualifies for the 24-month STEM OPT extension, what E-Verify and the I-983 training plan actually require, and how the H-1B cap-gap extension bridges you to your H-1B start date."
   },
   {
     "slug": "blog-h1b-fee-blocked-september-2026-update",
