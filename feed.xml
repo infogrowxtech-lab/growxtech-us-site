@@ -6,7 +6,31 @@
     <atom:link href="https://growxtech-it.us/feed.xml" rel="self" type="application/rss+xml" />
     <description>Career, resume, interview and IT job-market insights from Growx Tech IT.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>DHS Wants to End H-1B Extension “Deference”: What the October 14 Proposal Would Change</title>
+      <link>https://growxtech-it.us/blog-h1b-deference-proposal-explained-november-2026</link>
+      <guid isPermaLink="true">https://growxtech-it.us/blog-h1b-deference-proposal-explained-november-2026</guid>
+      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Visa &amp; Work Authorization</category>
+      <description>DHS published a proposal October 14 to delete the rule telling USCIS to defer to its own prior approvals on H-1B extensions. Comments close November 13. What would change, and what hasn't, in plain facts.</description>
+    </item>
+    <item>
+      <title>Canada's Low-Wage LMIA Freeze Just Expanded to 30 Cities: What Changed on October 9</title>
+      <link>https://growxtech-it.us/blog-canada-low-wage-lmia-freeze-30-cities-october-2026</link>
+      <guid isPermaLink="true">https://growxtech-it.us/blog-canada-low-wage-lmia-freeze-30-cities-october-2026</guid>
+      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Visa &amp; Work Authorization</category>
+      <description>Canada added 6 more cities to its low-wage LMIA processing freeze on October 9, bringing the total to 30 of 41 metros. What the rule actually covers, and why most skilled tech roles clear it entirely.</description>
+    </item>
+    <item>
+      <title>How to Get an IT Job in Sydney, Australia in 2026</title>
+      <link>https://growxtech-it.us/blog-it-job-sydney-australia-2026</link>
+      <guid isPermaLink="true">https://growxtech-it.us/blog-it-job-sydney-australia-2026</guid>
+      <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Job Market</category>
+      <description>Australia's tech workforce is nearing 1 million and software engineering roles are up 7% year over year, even as monthly ICT job ads cooled in September. What that mixed picture means for a Sydney job search.</description>
+    </item>
     <item>
       <title>Canada Drops the LMIA Requirement for High-Wage Tech Job Offers: What It Means for Your Toronto or Vancouver Job Search</title>
       <link>https://growxtech-it.us/blog-canada-express-entry-lmia-high-wage-tech-jobs</link>
@@ -182,30 +206,6 @@
       <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
       <category>Visa &amp; Work Authorization</category>
       <description>How many unemployment days you're allowed on F-1 OPT and STEM OPT, when the clock starts, what counts against it, and what to do if you're close to the limit.</description>
-    </item>
-    <item>
-      <title>Running Out of OPT Days? Your Real Options, Explained</title>
-      <link>https://growxtech-it.us/blog-opt-running-out-of-days</link>
-      <guid isPermaLink="true">https://growxtech-it.us/blog-opt-running-out-of-days</guid>
-      <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
-      <category>Visa &amp; Work Authorization</category>
-      <description>If you're close to your 90 or 150-day OPT unemployment limit, here are your actual options: continuing education, changing status, or departing, and why there's no grace period once you cross it.</description>
-    </item>
-    <item>
-      <title>STEM OPT Extension and the H-1B Cap-Gap, Explained</title>
-      <link>https://growxtech-it.us/blog-stem-opt-extension-cap-gap-explained</link>
-      <guid isPermaLink="true">https://growxtech-it.us/blog-stem-opt-extension-cap-gap-explained</guid>
-      <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
-      <category>Visa &amp; Work Authorization</category>
-      <description>Who qualifies for the 24-month STEM OPT extension, what E-Verify and the I-983 training plan actually require, and how the H-1B cap-gap extension bridges you to your H-1B start date.</description>
-    </item>
-    <item>
-      <title>The H-1B $100,000 Fee Is Blocked Again: The September 2026 Court Update, Explained</title>
-      <link>https://growxtech-it.us/blog-h1b-fee-blocked-september-2026-update</link>
-      <guid isPermaLink="true">https://growxtech-it.us/blog-h1b-fee-blocked-september-2026-update</guid>
-      <pubDate>Tue, 22 Sep 2026 12:00:00 +0000</pubDate>
-      <category>Visa &amp; Work Authorization</category>
-      <description>The H-1B fee proclamation was just extended through September 2027, but a federal court still has the $100,000 fee itself blocked. What's actually enforceable right now, in plain facts.</description>
     </item>
   </channel>
 </rss>
