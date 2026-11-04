@@ -14,8 +14,8 @@ window.GX = window.GX || {};
 
 GX.WA        = '13026831622';
 GX.WA_DISPLAY= '+1 (302) 683-1622';
-GX.TEL       = '+17198389991';
-GX.TEL_DISPLAY = '+1 (719) 838-9991';
+GX.TEL       = '+16282023466';
+GX.TEL_DISPLAY = '+1 (628) 202-3466';
 GX.EMAIL     = 'hi@growxtech-it.us';
 
 GX.SHEET_URL = 'https://script.google.com/macros/s/AKfycbyW-EBzKfKQWj4ZMtpZ1tSq8jnfS2lYZQu2PXpPVVY3H1vVtIJKtRSrg2hQFuOUYnOJmg/exec';

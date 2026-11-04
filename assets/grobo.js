@@ -6,8 +6,8 @@
   var KBD = window.GROBO_KB || { KB: [], RULES: [], FALLBACK: [], CLARIFY: [], SYN: {} };
 
   var WA_NUM = C.WA || '13026831622';
-  var TEL    = C.TEL || '+17198389991';
-  var TEL_D  = C.TEL_DISPLAY || '+1 (719) 838-9991';
+  var TEL    = C.TEL || '+16282023466';
+  var TEL_D  = C.TEL_DISPLAY || '+1 (628) 202-3466';
   var EMAIL  = C.EMAIL || 'hi@growxtech-it.us';
   var AVATAR = '/assets/grobo-avatar.webp';
   var BODY   = '/assets/grobo-hero.webp';
