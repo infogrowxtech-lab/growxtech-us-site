@@ -6,7 +6,31 @@
     <atom:link href="https://growxtech-it.us/feed.xml" rel="self" type="application/rss+xml" />
     <description>Career, resume, interview and IT job-market insights from Growx Tech IT.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The PERM Suspension at Microsoft, Infosys and 6 Other Firms, Explained: What It Means If You're on H-1B</title>
+      <link>https://growxtech-it.us/blog-h1b-perm-suspension-explained-november-2026</link>
+      <guid isPermaLink="true">https://growxtech-it.us/blog-h1b-perm-suspension-explained-november-2026</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Visa &amp; Work Authorization</category>
+      <description>The Labor Department suspended Microsoft, Adobe, and six IT outsourcing firms from the PERM green card program on October 8. Its inspector general now says more companies could follow. What changed, and what it means if you're on H-1B.</description>
+    </item>
+    <item>
+      <title>Canada Just Doubled How Long a Low-Wage Work Permit Can Last: What Changed on November 6</title>
+      <link>https://growxtech-it.us/blog-canada-low-wage-lmia-two-year-permits-november-2026</link>
+      <guid isPermaLink="true">https://growxtech-it.us/blog-canada-low-wage-lmia-two-year-permits-november-2026</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Visa &amp; Work Authorization</category>
+      <description>Canada doubled the maximum duration of low-wage LMIA work permits from 1 year to 2, effective November 6. What changed, who it actually affects, and why it's a different rule than October's high-wage Express Entry exemption.</description>
+    </item>
+    <item>
+      <title>How to Get an IT Job in Melbourne, Australia in 2026</title>
+      <link>https://growxtech-it.us/blog-it-job-melbourne-australia-2026</link>
+      <guid isPermaLink="true">https://growxtech-it.us/blog-it-job-melbourne-australia-2026</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+      <category>Job Market</category>
+      <description>Victoria's digital tech sector employs over 306,000 people and contributes more than $36 billion to the state economy, with 19,300 more tech jobs expected by 2028. What the data shows, and how to position yourself for Melbourne's IT market.</description>
+    </item>
     <item>
       <title>DHS Wants to End H-1B Extension “Deference”: What the October 14 Proposal Would Change</title>
       <link>https://growxtech-it.us/blog-h1b-deference-proposal-explained-november-2026</link>
@@ -182,30 +206,6 @@
       <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
       <category>Visa &amp; Work Authorization</category>
       <description>The three streams of Australia's subclass 485 visa, how long each one lasts, the age limit, and the 6-month application window after your course ends.</description>
-    </item>
-    <item>
-      <title>Canada's Post-Graduation Work Permit (PGWP), Explained (2026)</title>
-      <link>https://growxtech-it.us/blog-canada-pgwp-explained</link>
-      <guid isPermaLink="true">https://growxtech-it.us/blog-canada-pgwp-explained</guid>
-      <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
-      <category>Visa &amp; Work Authorization</category>
-      <description>Who qualifies for Canada's PGWP, how permit length is tied to your program, the 180-day application window, and the field-of-study rule that started November 2024.</description>
-    </item>
-    <item>
-      <title>Day-1 CPT vs OPT: What's Actually Different, and the Real Risk</title>
-      <link>https://growxtech-it.us/blog-day1-cpt-vs-opt</link>
-      <guid isPermaLink="true">https://growxtech-it.us/blog-day1-cpt-vs-opt</guid>
-      <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
-      <category>Visa &amp; Work Authorization</category>
-      <description>Day-1 CPT lets you work from the start of your program, but full-time CPT for a year quietly kills your OPT eligibility. What CPT and OPT actually require, and where Day-1 CPT programs get risky.</description>
-    </item>
-    <item>
-      <title>OPT Unemployment Days Explained: The 90-Day and 150-Day Rule</title>
-      <link>https://growxtech-it.us/blog-opt-90-day-unemployment-rule-explained</link>
-      <guid isPermaLink="true">https://growxtech-it.us/blog-opt-90-day-unemployment-rule-explained</guid>
-      <pubDate>Thu, 24 Sep 2026 12:00:00 +0000</pubDate>
-      <category>Visa &amp; Work Authorization</category>
-      <description>How many unemployment days you're allowed on F-1 OPT and STEM OPT, when the clock starts, what counts against it, and what to do if you're close to the limit.</description>
     </item>
   </channel>
 </rss>

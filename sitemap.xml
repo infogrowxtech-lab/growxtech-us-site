@@ -320,7 +320,7 @@
 </url>
 <url>
 <loc>https://growxtech-it.us/blog</loc>
-<lastmod>2026-11-02</lastmod>
+<lastmod>2026-11-16</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -1254,5 +1254,24 @@
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://growxtech-it.us/blog-h1b-perm-suspension-explained-november-2026</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-canada-low-wage-lmia-two-year-permits-november-2026</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-it-job-melbourne-australia-2026</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
