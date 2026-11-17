@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 500 500" width="500" height="500">
+  <title>Growx Tech IT</title>
+  <rect width="500" height="500" fill="#0d0f1f"/>
+  <circle cx="250" cy="250" r="230" fill="none" stroke="#22d3ee" stroke-width="10"/>
+  <path d="M185,195 A80,80 0 1,0 265,275 L265,255 L225,255 L225,275 A50,50 0 1,1 185,225 Z" fill="white"/>
+  <line x1="295" y1="195" x2="355" y2="275" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <line x1="295" y1="275" x2="345" y2="210" stroke="white" stroke-width="22" stroke-linecap="round"/>
+  <polyline points="333,195 355,220 333,245" fill="none" stroke="#f59e0b" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
