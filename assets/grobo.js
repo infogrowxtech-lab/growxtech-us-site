@@ -10,7 +10,7 @@
   var TEL_D  = C.TEL_DISPLAY || '+1 (628) 202-3466';
   var EMAIL  = C.EMAIL || 'hi@growxtech-it.us';
   var AVATAR = '/assets/grobo-avatar.webp';
-  var BODY   = '/assets/grobo-hero.webp';
+  var BODY   = '/assets/grobo-solve.webp';
 
   /* ============================================================ helpers */
   function wa(text) {
