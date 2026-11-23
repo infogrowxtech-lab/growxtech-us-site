@@ -320,7 +320,7 @@
 </url>
 <url>
 <loc>https://growxtech-it.us/blog</loc>
-<lastmod>2026-11-16</lastmod>
+<lastmod>2026-11-23</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -1346,5 +1346,24 @@
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://growxtech-it.us/blog-duration-of-status-rule-vacated-november-2026</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-it-job-toronto-recent-graduate-2026</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/blog-october-2026-jobs-report-layoffs-explained</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
