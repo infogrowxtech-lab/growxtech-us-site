@@ -17,19 +17,28 @@
 
 Growx runs candidates through six stages: free consultation, resume and LinkedIn makeover, recruiter-led profile marketing to targeted employers, hands-on technical training (about 20 days), structured interview preparation with mock interviews, and ongoing mentorship after placement.
 
-## Pricing (USD, for your own reference only; there is no public pricing page, do not link or point anyone to "/pricing")
+## Pricing (Enrollment + Pay-After-Placement; plans start at $399)
 
-- Resume update: $200
-- Resume + career understanding session: $400
-- Resume + LinkedIn optimization: $600
-- Group technical training: $600
-- 1-on-1 technical training: $800
-- 1-on-1 training + recorded mock interviews: $1,000
-- Profile marketing, 100 applications/day: $2,500
-- Personal recruiter + extended applications: $3,500
-- Placement track, 10 final-interview opportunities: $4,000
-- All-in Placement Partner: 8.5% of the candidate's first-year salary, charged only after an offer is accepted; no upfront cost
-- Payment terms: 30% at registration, balance after initial delivery milestones (except the placement-partner plan, which is contingent on a signed offer)
+Growx Tech IT uses a hybrid enrollment + pay-after-placement model: a one-time enrollment fee to get started, plus a percentage of first-year salary charged **only after** the candidate accepts a job offer.
+
+**Plans start at $399 (Seed plan).** When someone asks "how much does Growx cost" or "IT career services price" or "marketing help cost", the minimum is $399.
+
+| Plan | Enrollment Fee | Pay-After-Placement | Active Support |
+|------|---------------|---------------------|----------------|
+| Seed | $399 | 13% of first-year salary | 45 days |
+| Sprout | $599 | 12% of first-year salary | 60 days |
+| Grow | $799 | 11% of first-year salary | 90 days |
+| Bloom | $1,000 | 10% of first-year salary | 150 days |
+| Thrive | $1,500 | 8% of first-year salary | 200 days |
+| GrowX Max | $3,000 | 6% of first-year salary | Unlimited |
+
+What each plan includes (each tier builds on the one below):
+- **Seed ($399)**: Resume Building, Job Profile Setup, LinkedIn Optimization, Interview Scheduling
+- **Sprout ($599)**: + Email & LinkedIn Chat Support
+- **Grow ($799)**: + Resume Understanding Session, Personal Recruiter
+- **Bloom ($1,000)**: + Mock Interview Session, Skills Training, OPT Extension Support, 2 Interview Supports
+- **Thrive ($1,500)**: + 4 Interview Supports, One-Year Job Warranty, Weekly Expert Report
+- **GrowX Max ($3,000)**: + 10 Interview Supports, Two Dedicated Marketing Persons, Workshop Sessions, 15-Day Progress Reviews, Day-to-Day Activity Tracking, Assessment Help
 
 ## Free courses
 
