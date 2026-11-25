@@ -26,7 +26,7 @@
 </url>
 <url>
 <loc>https://growxtech-it.us/courses</loc>
-<lastmod>2026-11-18</lastmod>
+<lastmod>2026-11-25</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.9</priority>
 </url>
@@ -1365,5 +1365,78 @@
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://growxtech-it.us/course-figma-basics</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-github-actions-basics</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-qa-manual-testing-basics</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-servicenow-itsm-basics</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-zero-trust-security-fundamentals</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-gcp-associate-cloud-engineer</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-comptia-cloud-plus-overview</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-thank-you-email-after-interview</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-freelancing-in-it</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-managing-up-at-work</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-building-confidence-at-work</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growxtech-it.us/course-renewable-energy-careers</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
